@@ -1,0 +1,32 @@
+@import url('../styles.less');
+
+header {
+    background: @page-bg;
+}
+
+.nav-sticky {
+    position: static;
+    top: 0;
+
+    .nav {
+        display: flex;
+        
+        .links {
+            display: flex;
+            gap: 15px;
+
+            .link{
+                list-style: none;
+
+                a {
+                    color: @text-color;
+                    text-decoration: none;
+                }
+
+                > p {
+                    text-transform: uppercase;
+                }
+            }
+        }
+    }
+}
