@@ -1,9 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
 
+.wow {
+    visibility: hidden;
+}
+
 .aegios_wrapper img {
     width: 100%;
     max-width: 100%;
     justify-self: center;
+    object-fit: cover;
 }
 
 .aegios_wrapper h1,
@@ -55,6 +60,10 @@
 
 .aegios_wrapper .d_flex {
     display: flex;
+}
+
+.aegios_wrapper .font_14 {
+    font-size: 14px;
 }
 
 .aegios_wrapper .font_16 {
@@ -193,6 +202,10 @@ body {
     gap: 0 !important;
 }
 
+.gap-120{
+    gap: 120px;
+}
+
 .section-padding {
     padding: 110px 0;
 }
@@ -210,7 +223,11 @@ a {
 }
 
 @page-bg: #FFFFFF;
+@bg-dropdown-color: #0E0B2C;
+@nav-bg-color-black: #000000;
 @text-color: #000000;
+@text-hover-color: #EA2B44;
+@common-transition: all .8s linear;
 
 @font-face {
     font-family: 'Lato-Regular';
@@ -255,6 +272,7 @@ a {
 
 @lato-regular: Lato-Regular;
 @lato-light: Lato-Light;
+@lato-bold: Lato-Bold;
 @lato-thin: Lato-Thin;
 
 body{

@@ -1,39 +1,39 @@
 <div class="aegios_wrapper">
   
   <header>
-    <div class="nav-sticky">
-      <div class="nav">
-        <div class="logo"><img src="assets/images/logo.png" alt=""></div>
-        <ul class="links">
-          <li class="link"><p class="font_14"><a routerLink="/home" routerLinkActive="active" >home</a></p></li>
-          <li class="link">
-            <p class="font_14 dropdown_btn">company +</p>
-            <div class="dropdown">
-              <p class="font_14"><a routerLink="/about-us" routerLinkActive="active" >About us</a></p>
-              <p class="font_14"><a routerLink="/quality" routerLinkActive="active" >Quality</a></p>
-              <p class="font_14"><a routerLink="/vmv" routerLinkActive="active" >Vision Mission Values</a></p>
+    <div class="nav-sticky w100">
+      <div class="nav gap-120" [class.active]="isMenuOpen">
+        <div class="logo"><a routerLink="/" ><img src="assets/images/logo.png" alt=""></a></div>
+        <div class="menu_btn font_20" (click)="toggleMenu($event)"><i class="fa-solid fa-bars"></i></div>
+        <ul class="links flex-gap-small">
+          <div class="white_logo_mob"><a routerLink="/" ><img src="assets/images/logo.png" alt=""></a></div>
+          <li class="link" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}"><p class="font_14"><a routerLink="/" >home</a></p></li>
+          <li class="link" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
+            <p class="font_14 dropdown_btn" (click)="toggleDropdown()">company <span>+</span></p>
+            <div class="dropdown wow fadeInUp" [class.openDD]="isDropDownOpen" data-wow-delay=".2s" data-wow-duration=".5s">
+              <p class="font_14"><a routerLink="/about-us" >About Us</a></p>
+              <p class="font_14"><a routerLink="/quality" >Quality</a></p>
+              <p class="font_14"><a routerLink="/vmv" >Vision Mission Values</a></p>
             </div>
-          
           </li>
-          <li class="link">
-            <p class="font_14 dropdown_btn">products +</p>
-            <div class="dropdown">
-              <p class="font_14"><a routerLink="/bopet-films" routerLinkActive="active" >BOPET Films</a></p>
-              <p class="font_14"><a routerLink="/metalized-films" routerLinkActive="active" >Metalized Films</a></p>
-              <p class="font_14"><a routerLink="/polyester" routerLinkActive="active" >Polyester Resins & Chips</a></p>
-              <p class="font_14"><a routerLink="/bopp-films" routerLinkActive="active" >BOPP Films (Coming Soon)</a></p>
+
+          <li class="link" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
+            <p class="font_14 dropdown_btn" (click)="toggleDropdown2()">products <span>+</span></p>
+            <div class="dropdown wow fadeInUp" [class.openDD]="isDropDownOpen2" data-wow-delay=".2s" data-wow-duration=".5s">
+              <p class="font_14"><a routerLink="/bopet-films" >BOPET Films</a></p>
+              <p class="font_14"><a routerLink="/metalized-films" >Metalized Films</a></p>
+              <p class="font_14"><a routerLink="/polyester" >Polyester Resins & Chips</a></p>
+              <p class="font_14"><a routerLink="/bopp-films" >BOPP Films (Coming Soon)</a></p>
             </div>
-          
           </li>
-          <li class="link"><p class="font_14"><a routerLink="/sustainability" routerLinkActive="active" >sustainability</a></p></li>
-
-          <li class="link"><p class="font_14"><a routerLink="/career" routerLinkActive="active" >career</a></p></li>
-          <li class="link"><p class="font_14"><a routerLink="/contact-us" routerLinkActive="active" >contact-us</a></p></li>
-
+          
+          <li class="link" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}"><p class="font_14"><a routerLink="/sustainability">sustainability</a></p></li>
+          <li class="link" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}"><p class="font_14"><a routerLink="/career">career</a></p></li>
+          <li class="link" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}"><p class="font_14"><a routerLink="/contact-us">contact-us</a></p></li>
         </ul>
+        <div class="nav-overlay" (click)="toggleMenu($event)"></div>
       </div>
     </div>
-
   </header>
 
 

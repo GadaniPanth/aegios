@@ -1,22 +1,81 @@
 @import url('../styles.less');
-
-header {
-    background: @page-bg;
-}
-
 .nav-sticky {
-    position: static;
+    position: sticky;
     top: 0;
+    box-shadow: 0 5px 5px #e2e8f0;
+    background: @page-bg;
+    z-index: 9995;
 
     .nav {
         display: flex;
+        align-items: center;
+        padding: 0 60px;
         
+        .logo {
+            width: 225px;
+        }
+        
+        .white_logo_mob {
+            width: 225px;
+        }
+        
+        .menu_btn, .white_logo_mob {
+            display: none;
+            padding: 25px 0;
+        }
+
         .links {
             display: flex;
-            gap: 15px;
+            text-align: center;
+            align-items: center;
 
             .link{
+                padding: 25px 0;
                 list-style: none;
+                cursor: pointer;
+                position: relative;
+                // border-bottom: solid 1px #EA2B44;
+                &::after {
+                    content: '';
+                    position: absolute;
+                    bottom: 0;
+                    left: 50%;
+                    width: 0%;
+                    height: 2px;
+                    background-color: @text-hover-color;
+                    transition: all 0.3s ease;
+                    transform: translateX(-50%);
+                  }
+                
+                  &:hover::after {
+                    width: 100%;
+                  }
+
+                  &.active{
+                      &::after {
+                        width: 100%;
+                      }
+
+                      > p, :not(.dropdown a)  {
+                        color: @text-hover-color;
+                    }
+
+                  }
+
+                &:hover {
+                    >p, a {
+                        transition: all .5s ease;
+                    }
+                    > p, :not(.dropdown a)  {
+                        color: @text-hover-color;
+                    }
+
+                    .dropdown{
+                        opacity: 1;
+                        transform: translateY(.5px);
+                        pointer-events: unset;
+                    }
+                }
 
                 a {
                     color: @text-color;
@@ -24,7 +83,37 @@ header {
                 }
 
                 > p {
+                    font-family: @lato-bold;
                     text-transform: uppercase;
+                    transition: color 1s linear;
+                }
+
+                .dropdown {
+                    position: absolute;
+                    text-align: left;
+                    top: 100%;
+                    left: 0;
+                    width: 250px;
+                    // display: none;
+                    background: @bg-dropdown-color;
+                    opacity: 0;
+                    transform: translateY(10%);
+                    transition: all .5s ease;
+                    padding: 25px;
+                    border-radius: 16px;
+                    box-shadow: 0 0 .5px #000000;
+                    pointer-events: none;
+
+                    * {
+                        color: white;
+                    }
+                    p {
+                        padding: 8px 0;
+                        
+                        & a:hover {
+                            color: @text-hover-color;
+                        }
+                    }
                 }
             }
         }
@@ -49,5 +138,129 @@ footer {
     .footer-bg {
         background: #101010;
         z-index: 1;
+    }
+}
+
+
+@media only screen and (max-width: 1280px)  {
+
+    .nav.active  .nav-overlay {
+        pointer-events: all;
+        opacity: 1;
+    }
+    .nav-overlay {
+        opacity: 0;
+        pointer-events: none;
+        display: block;
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        background: #0000007d;
+        z-index: 9998;
+        top: 0;
+        left: 0;
+        transition: all .8s ease;
+    }
+
+    .nav-sticky {
+        .nav {
+            justify-content: space-between;
+            // padding: 0;
+            .menu_btn, .white_logo_mob {
+                display: block;
+            }
+
+            &.active .links {
+                // display: none;
+                right: 0;
+            }
+
+             .links {
+                // visibility: hidden;
+                position: fixed;
+                right: -100%;
+                top: 0;
+                height: 100svh;
+                width: 30%;
+                background: @nav-bg-color-black;
+                flex-direction: column;
+                gap: 0;
+                text-align: left;
+                z-index: 9999;
+                transition: all .8s ease;
+
+                .white_logo_mob {
+                    filter: brightness(0%) invert(1);
+                }
+
+                .link {
+                    gap: 0;
+                    background: #000;
+                    margin: 16px 0;
+                    width: 80%;
+                    border-bottom: solid 1px white;
+                    padding: 0;
+
+                    &::after {
+                        display: none;
+                    }
+
+                    *, a{
+                        color: white;
+                    }
+
+                    .openDD.dropdown {
+                        max-height: 200px;
+                        opacity: 1 !important;
+                    }
+
+                    &:hover {
+                        .dropdown{
+                            opacity: unset;
+                            transform: unset;
+                            pointer-events: unset;
+                        }
+                    }
+
+                    .dropdown {
+                        position: static;
+                        width: 100%;
+                        text-indent: 20px;
+                        // display: none;
+                        background: transparent;
+                        opacity: 0 !important;
+                        transform: unset;
+                        transition: all .5s ease;
+                        padding: 0;
+                        border-radius: unset;
+                        box-shadow: unset;
+                        pointer-events: unset;
+                        max-height: 0;
+                        transition: max-height .5s ease, opacity .5s linear .2s;
+
+                        * {
+                            color: white;
+                        }
+                        p {
+                            padding: 8px 0;
+                            
+                            & a:hover {
+                                color: @text-hover-color;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .nav-sticky {
+        .nav {
+            .links {
+                width: 100%;
+            }
+        }
     }
 }
