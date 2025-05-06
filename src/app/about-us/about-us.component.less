@@ -1,0 +1,121 @@
+.aegios_wrapper {
+    .p-30 {
+        padding: 30px;
+    }
+
+    ul.bg-color {
+        background-color: #fff4f6;
+        padding: 10px 16px;
+        list-style: none;
+
+        li {
+            display: inline;
+
+            a {
+                &.red {
+                    color: #e82a43;
+
+                    &:hover {
+                        color: black;
+                    }
+                }
+            }
+
+            a {
+                color: black;
+            }
+        }
+
+        li+li:before {
+            padding: 8px;
+            color: black;
+            content: "/\00a0";
+        }
+    }
+
+
+    .sec2-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+        align-items: center;
+
+        h2 {
+            font-size: 30px;
+            font-weight: 400;
+            color: #ec2037;
+        }
+
+        p {
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 25px;
+        }
+    }
+
+
+    .section-3-main {
+        .sec-3-detail {
+            .sec-3-redbox {
+                max-width: 1000px;
+                background-image: linear-gradient(165deg, #ea243d, #0b0a15);
+                border-radius: 20px;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                margin-left: auto;
+                margin-right: auto;
+                padding-top: 60px;
+                padding-bottom: 125px;
+                display: flex;
+
+                p {
+                    font-size: 17px;
+                    margin: 0 50px;
+                }
+            }
+
+            .sec-3-boxes {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 30px;
+                margin-top: -110px;
+
+                // .sec-3-box {
+
+
+                // }
+            }
+        }
+    }
+
+    .bg-about-us {
+        background: url('/assets/images/about-us/about-bg.jpg');
+        background-repeat: no-repeat;
+        background-size: auto;
+        background-position: center center;
+
+        .sec-4-details {
+            padding: 4rem 9% 3rem;
+            position: relative;
+            -webkit-backdrop-filter: saturate(180%) blur(1.25rem);
+            background-color: #ffffffba;
+            backdrop-filter: saturate(180%) blur(0.5rem);
+            border-radius: 20px;
+        }
+    }
+
+    .sec-6-img {
+        width: 40%;
+        margin: 0 auto;
+    }
+
+    .sec-5-details {
+        width: 48%;
+        margin: 0 auto;
+
+        p {
+            font-size: 18px;
+        }
+    }
+}
