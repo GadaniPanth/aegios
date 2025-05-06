@@ -311,6 +311,77 @@ body {
     font-family: @lato-regular;
 }
 
+@keyframes loader {
+    0%{
+        opacity: 1;
+        pointer-events: all;
+    }
+    80%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+        pointer-events: none;
+    }
+}
+
+@keyframes loader_img {
+    0%{
+        opacity: 1;
+    }
+    // 10%{
+    //     opacity: 0;
+    // }
+    // 20%{
+    //     opacity: 1;
+    // }
+    30%{
+        opacity: 0;
+    }
+    // 40%{
+    //     opacity: 1;
+    // }
+    // 50%{
+    //     opacity: 0;
+    // }
+    60%{
+        opacity: 1;
+    }
+    // 70%{
+    //     opacity: 0;
+    // }
+    // 80%{
+    //     opacity: 1;
+    // }
+    90%{
+        opacity: 0;
+    }
+    // 100%{
+    //     opacity: 1;
+    // }
+}
+
+.page-loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    width: 100dvw;
+    height: 100dvh;
+    background-color: @page-bg;
+    display: grid;
+    place-items: center;
+    opacity: 0;
+    animation: loader 3s linear;
+    pointer-events: none;
+}
+
+.img-container {
+    opacity: 0;
+    width: 5%;
+    animation: loader_img 3s linear;
+}
+
 @media only screen and (max-width:1280px) {
     .aegios_wrapper .font_14 {
         font-size: 20px;

@@ -1,5 +1,11 @@
 <div class="aegios_wrapper">
 
+  <div class="page-loader">
+    <div class="img-container">
+      <img src="assets/images/preloader.png" alt="">
+    </div>
+  </div>
+
   <header>
     <div class="nav-sticky w100">
       <div class="nav gap-120" [class.active]="isMenuOpen">
@@ -56,7 +62,7 @@
         <div class="d_grid">
           <div class="footer-1">
             <div class="footer-1-main inner-flex">
-              <a href="#" class="footer-logo">
+              <a routerLink="/" class="footer-logo">
                 <img src="assets/images/footer/white-logo.png" alt="">
               </a>
               <p class="white-color lh-25">
@@ -72,10 +78,10 @@
           <div class="footer-1">
             <div class="footer-header inner-flex white-color  ml-60">
               <h3 class="uppercase">Useful Links</h3>
-              <a href="#" class="white-color">About Us</a>
-              <a href="#" class="white-color">Sustainability</a>
-              <a href="#" class="white-color">Career</a>
-              <a href="#" class="white-color">Contact Us</a>
+              <a routerLink="/about-us" class="white-color">About Us</a>
+              <a routerLink="/sustainability" class="white-color">Sustainability</a>
+              <a routerLink="/career" class="white-color">Career</a>
+              <a routerLink="/contact-us" class="white-color">Contact Us</a>
             </div>
           </div>
           <div class="footer-1">
