@@ -1,5 +1,40 @@
 <div class="home_wrapper">
-    <section class="section1">
-        
+    <section class="section1 w100 section-padding relative">
+        <div class="swiper-container w90 mtb0">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide" *ngFor="let product of products" data-swiper-autoplay="2000">
+                    <div class="grid flex-gap-medium">
+                        <div class="left_side flex-gap-medium">
+                            <div class="head"><p class="font_48">{{product.head}}</p></div>
+                            <div class="about"><p class="font_20">{{product.about}}</p></div>
+                            <a [routerLink]="product.url" >
+                                <div class="btn">
+                                    <p class="font_20">READ MORE</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="right_side">
+                            <div class="img_container">
+                                <img [src]="product.img" alt="" *ngIf="product.img">
+                                <video controls *ngIf="product.video" muted autoplay loop style="pointer-events: none;">
+                                    <source [src]="product.video" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="swiper_btn_container relative">
+            <div class="swiper-button-prev">
+                <img src="assets/images/right-arrow.png" alt="" class="red">
+                <img src="assets/images/right-white-arrow.png" alt="" class="white">
+            </div>
+            <div class="swiper-button-next r-180">
+                <img src="assets/images/right-arrow.png" alt="" class="red">
+                <img src="assets/images/right-white-arrow.png" alt="" class="white">
+            </div>
+        </div>        
     </section>
 </div>
