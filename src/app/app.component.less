@@ -136,6 +136,9 @@
 }
 
 footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
     .footer-bg {
         background: #101010;
         z-index: 1;
@@ -298,6 +301,7 @@ footer {
 
     .nav-sticky {
         .nav {
+            padding: 0 25px;
             justify-content: space-between;
             // padding: 0;
             .menu_btn, .white_logo_mob {
@@ -315,16 +319,25 @@ footer {
                 right: -100%;
                 top: 0;
                 height: 100svh;
-                width: 30%;
+                width: 38%;
                 background: @nav-bg-color-black;
                 flex-direction: column;
+                overflow: auto;
                 gap: 0;
                 text-align: left;
                 z-index: 9999;
                 transition: all .8s ease;
 
+                .menu_head {
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    padding-right: 20px;
+                }
+
                 .white_logo_mob {
-                    filter: brightness(0%) invert(1);
+                        filter: brightness(0%) invert(1);
                 }
 
                 .link {
@@ -461,6 +474,12 @@ footer {
 
 @media only screen and (max-width: 486px) {
 
+    .nav-sticky {
+        .nav {
+            padding: 0 15px;
+        }
+    }
+
     .container {
         width: 95%;
         margin: 0 auto;
@@ -469,7 +488,11 @@ footer {
 }
 
 @media only screen and (max-width: 370px) {
-
+    .nav-sticky {
+        .nav {
+            padding: 0 10px;
+        }
+    }
     .container {
         width: 90%;
         margin: 0 auto;

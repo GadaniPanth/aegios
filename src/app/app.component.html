@@ -6,7 +6,10 @@
         <div class="logo"><a routerLink="/" ><img src="assets/images/logo.png" alt=""></a></div>
         <div class="menu_btn font_20" (click)="toggleMenu($event)"><i class="fa-solid fa-bars"></i></div>
         <ul class="links flex-gap-small">
-          <div class="white_logo_mob"><a routerLink="/" ><img src="assets/images/logo.png" alt=""></a></div>
+          <div class="menu_head">
+              <div class="white_logo_mob"><a routerLink="/" ><img src="assets/images/logo.png" alt=""></a></div>
+              <div class="menu_close font_14" (click)="toggleMenu($event)"><i class="fa-solid fa-xmark" style="color: #ffffff;"></i></div>
+            </div>
           <li class="link" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}"><p class="font_14"><a routerLink="/" >home</a></p></li>
           <li class="link" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
             <p class="font_14 dropdown_btn" (click)="toggleDropdown()">company <span>+</span></p>
