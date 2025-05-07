@@ -47,7 +47,7 @@ export class ProductDataService {
     {
       slug: 'polyester',
       parent: 'Products',
-      name: 'Polyester ( Resins & Chips )',
+      name: 'Polyester (Resins & Chips)',
       mainImage: 'assets/images/products/polyester/resin-banner.jpg',
       sec1Image: 'assets/images/products/polyester/resin1.png',
       sec1Text: 'At Aegios, we offer a wide range of premium Polyester Resins and Chips solutions tailored to meet diverse packaging needs. Our exclusive resins ensure a consistent supply for film manufacturing, bottles, and additives, catering to various industry applications.',

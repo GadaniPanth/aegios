@@ -9,8 +9,8 @@
                 <ul class="bg-color">
                     <li><a routerLink="/" class="red font_18">Home</a></li>
                     <ng-container *ngIf="product.parent && product.name">
-                        <li><a class="font_18">{{product.parent}}</a></li>
-                        <li><a class="font_18">{{product.name}}</a></li>
+                        <li><a class="font_18 parent">{{product.parent}}</a></li>
+                        <li><a class="font_18 name">{{product.name}}</a></li>
                     </ng-container>
                 </ul>
             </div>
