@@ -55,7 +55,7 @@ export class HomeComponent implements OnInit {
         prevEl: ".swiper-button-prev",
       },
       autoplay: {
-        delay: 10000,
+        delay: 5000,
       },
       loop: true,
     });

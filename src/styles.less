@@ -314,6 +314,24 @@ a {
   width: max-content;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+pre,
+span,
+a,
+tr,
+th {
+  &::selection {
+    background: #000;
+    color: #fff;
+  }
+}
+
 @page-bg: #ffffff;
 @section-bg: #fbf2f6;
 @bg-dropdown-color: #0e0b2c;

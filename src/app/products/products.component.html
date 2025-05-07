@@ -1,5 +1,5 @@
 <div class="aegios_wrapper">
-    <section [class]="product.name">
+    <section [class]="product.name" *ngIf="product.name">
         <img [src]="product.mainImage" [alt]="product.name">
     </section>
 
@@ -17,7 +17,7 @@
         </div>
     </section>
 
-    <section class="ptb-30">
+    <section class="ptb-30" *ngIf="product.sec1Text">
         <div class="container">
             <div class="sec2-grid">
                 <div class="sec2-img">
@@ -45,11 +45,68 @@
     </section>
 
     <!-- <section class="section-4 bg-about-us"> -->
-    <section class="section-4 bg-about-us" [ngStyle]="{ 'background-image': 'url(' + product.sec2BgImage + ')' }">
+    <section class="section-3 bg-about-us" [ngStyle]="{ 'background-image': 'url(' + product.sec2BgImage + ')' }"
+        *ngIf="product.sec2Text">
         <div class="container section-padding">
-            <div class="sec-4-details">
+            <div class="sec-3-details">
                 <p class="txt-center font_17 black-color mb-25" *ngFor="let text of product.sec2Text">{{text}}</p>
             </div>
+        </div>
+    </section>
+
+    <section class="section-4 ptb-30 w100" *ngIf="product.sec4Text">
+        <div class=" head mb-25">
+            <h2 class="font_30">Product Features</h2>
+        </div>
+        <div class="feature_card_container d_flex flex-gap-small">
+            <div class="feature_card mb-25" *ngFor="let feature of product.sec4Icon; let i = index;">
+                <div class="icon">
+                    <img [src]="product.sec4Icon[i]" [alt]="product.name">
+                </div>
+                <div class="text">
+                    <p class="font_17">{{product.sec4Text[i]}}</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-5 ptb-30 mtb0" *ngIf="product.sec5Text">
+        <div class="head mb-25">
+            <h2 class="font_30">Applications</h2>
+        </div>
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide relative" *ngFor="let feature of product.sec5Image; let i = index;">
+                    <div class="img_container">
+                        <img [src]="product.sec5Image[i]" [alt]="product.name">
+                    </div>
+                    <div class="text">
+                        <p class="font_17">{{product.sec5Text[i]}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-6 ptb-30 container" *ngIf="product.table">
+        <div class="head mb-25">
+            <h2 class="font_30">Product Range</h2>
+        </div>
+        <div class="table_container">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Category</th>
+                        <th>Application</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let row of product.table">
+                        <th>{{row[0]}}</th>
+                        <th>{{row[1]}}</th>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     </section>
 </div>

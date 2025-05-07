@@ -6,8 +6,8 @@
     </div>
   </div> -->
 
-  <header>
-    <div class="nav-sticky w100">
+  <header class="nav-sticky">
+    <div class="w100">
       <div class="nav gap-120" [class.active]="isMenuOpen">
         <div class="logo"><a (click)="toggleMenu($event)" routerLink="/"><img src="assets/images/logo.png" alt=""></a>
         </div>
@@ -25,22 +25,29 @@
           <li class="link" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
             <p class="font_14 dropdown_btn" (click)="toggleDropdown()">company <span>+</span></p>
             <div class="dropdown" [class.openDD]="isDropDownOpen">
-              <p class="font_14"><a (click)="toggleMenu($event)" routerLink="/about-us">About Us</a></p>
-              <p class="font_14"><a (click)="toggleMenu($event)" routerLink="/quality">Quality</a></p>
-              <p class="font_14"><a (click)="toggleMenu($event)" routerLink="/vmv">Vision Mission Values</a></p>
+              <p class="font_14" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}"><a
+                  (click)="toggleMenu($event)" routerLink="/about-us">About Us</a></p>
+              <p class="font_14" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}"><a
+                  (click)="toggleMenu($event)" routerLink="/quality">Quality</a></p>
+              <p class="font_14" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}"><a
+                  (click)="toggleMenu($event)" routerLink="/vmv">Vision Mission Values</a></p>
             </div>
           </li>
 
           <li class="link" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
             <p class="font_14 dropdown_btn" (click)="toggleDropdown2()">products <span>+</span></p>
             <div class="dropdown" [class.openDD]="isDropDownOpen2">
-              <p class="font_14"><a (click)="toggleMenu($event)" routerLink="/products/bopet-films">BOPET Films</a></p>
-              <p class="font_14"><a (click)="toggleMenu($event)" routerLink="/products/metalized-films">Metalized
+              <p class="font_14" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}"><a
+                  (click)="toggleMenu($event)" routerLink="/products/bopet-films">BOPET Films</a></p>
+              <p class="font_14" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}"><a
+                  (click)="toggleMenu($event)" routerLink="/products/metalized-films">Metalized
                   Films</a></p>
-              <p class="font_14"><a (click)="toggleMenu($event)" routerLink="/products/polyester">Polyester Resins &
+              <p class="font_14" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}"><a
+                  (click)="toggleMenu($event)" routerLink="/products/polyester">Polyester Resins &
                   Chips</a>
               </p>
-              <p class="font_14"><a (click)="toggleMenu($event)" routerLink="/products/bopp-films">BOPP Films (Coming
+              <p class="font_14" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}"><a
+                  (click)="toggleMenu($event)" routerLink="/products/bopp-films">BOPP Films (Coming
                   Soon)</a>
               </p>
             </div>

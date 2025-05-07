@@ -2,7 +2,7 @@
     <section class="section1 w100 mini-section-padding relative">
         <div class="swiper-container w100">
             <div class="swiper-wrapper">
-                <div class="swiper-slide" *ngFor="let product of products" data-swiper-autoplay="2000">
+                <div class="swiper-slide" *ngFor="let product of products">
                     <div class="grid grid1 flex-gap-medium">
                         <div class="left_side flex-gap-medium">
                             <div class="head">
@@ -11,7 +11,7 @@
                             <div class="about">
                                 <p class="font_20">{{product.about}}</p>
                             </div>
-                            <a [routerLink]="product.url">
+                            <a [routerLink]="['/products/', product.url]">
                                 <div class="btn">
                                     <p class="font_20">READ MORE</p>
                                 </div>

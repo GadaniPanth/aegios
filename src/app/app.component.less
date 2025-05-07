@@ -48,6 +48,10 @@
           transform: translateX(-50%);
         }
 
+        .active a {
+          color: @text-hover-color !important;
+        }
+
         &:hover::after {
           width: 100%;
         }
@@ -92,6 +96,7 @@
         }
 
         .dropdown {
+          cursor: default;
           position: absolute;
           text-align: left;
           top: 100%;
