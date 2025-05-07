@@ -25,7 +25,8 @@
             "aot": false,
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              "node_modules/aos/dist/aos.css"
             ],
             "styles": [
               "node_modules/swiper/swiper-bundle.min.css",
