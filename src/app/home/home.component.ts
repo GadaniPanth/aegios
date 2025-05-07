@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import Swiper, { Autoplay, EffectFade, EffectFlip, Navigation } from "swiper";
-import * as AOS from 'aos';
+// import * as AOS from 'aos';
 
 @Component({
   selector: 'app-home',
