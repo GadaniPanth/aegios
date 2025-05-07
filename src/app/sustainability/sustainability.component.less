@@ -1,0 +1,225 @@
+.aegios_wrapper {
+    .ptb-30 {
+        padding: 30px 0;
+    }
+
+    .pb-30 {
+        padding-bottom: 30px;
+    }
+
+    .pb-0 {
+        padding-bottom: 0 !important;
+    }
+
+    ul.bg-color {
+        background-color: #fff4f6;
+        padding: 10px 16px;
+        list-style: none;
+
+        li {
+            display: inline;
+
+            a {
+                &.red {
+                    color: #e82a43;
+
+                    &:hover {
+                        color: black;
+                    }
+                }
+            }
+
+            a {
+                color: black;
+            }
+        }
+
+        li+li:before {
+            padding: 8px;
+            color: black;
+            content: "/\00a0";
+        }
+    }
+
+    .sustainability-h {
+        h2 {
+            color: #ec2037;
+            font-weight: 400;
+        }
+    }
+
+    .dn {
+        display: none;
+    }
+
+    .sus-section-padding {
+        padding: 70px 0;
+    }
+
+    .section-3 {
+        background: url('src/assets/images/sustainability/sus-bg.jpg');
+        background-repeat: no-repeat;
+        background-size: auto;
+        background-position: center center;
+
+        .sec-3-grid {
+
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+
+            .sec-3-details {
+                padding: 30px;
+                position: relative;
+                background-color: #ffffffba;
+                backdrop-filter: saturate(180%) blur(0.5rem);
+                border-radius: 20px;
+            }
+        }
+    }
+
+    .section-4 {
+        .sec-4-box {
+            background-color: #fff;
+            border: 1px solid #cecff5;
+            border-radius: 16px;
+            padding: 25px 15px;
+            box-shadow: 0 29px 33px -5px rgba(30, 51, 94, .15);
+            text-align: center;
+            margin-top: 20px;
+            transition: all 0.3s ease-in-out 0s;
+
+            &:hover {
+                border: 1px solid #ea243d;
+            }
+
+            .counter {
+                p {
+                    font-size: 30px;
+                    color: red;
+                }
+            }
+        }
+    }
+
+    .section-5 {
+        background: linear-gradient(135deg, #ffeef0, #f4f8fd);
+    }
+}
+
+
+
+@media only screen and (max-width: 1680px) {}
+
+@media only screen and (max-width: 1600px) {}
+
+@media only screen and (max-width: 1440px) {
+
+    .container {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+}
+
+@media only screen and (max-width: 1366px) {
+
+    .container {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+}
+
+@media only screen and (max-width: 1280px) {}
+
+@media only screen and (max-width: 1000px) {
+
+    .container {
+        width: 95%;
+        margin: 0 auto;
+    }
+
+    .dn {
+        display: block !important;
+    }
+
+    .db {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 991px) {
+
+    .container {
+        width: 90%;
+        margin: 0 auto;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+
+    .flex-gap-small {
+        gap: 8px;
+    }
+}
+
+@media only screen and (max-width: 680px) {}
+
+@media only screen and (max-width: 540px) {
+
+    .aegios_wrapper .font_30 {
+        font-size: 24px;
+    }
+
+    .aegios_wrapper .section-3 .sec-3-grid {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 30px;
+    }
+
+    .aegios_wrapper .sus-section-padding {
+        padding: 50px 0;
+    }
+
+    .aegios_wrapper .ptb-30 {
+        padding: 15px 0;
+    }
+}
+
+@media only screen and (max-width: 486px) {
+
+    .container {
+        width: 95%;
+        margin: 0 auto;
+    }
+
+    .aegios_wrapper .font_17 {
+        font-size: 15px;
+    }
+}
+
+@media only screen and (max-width: 370px) {
+
+    .container {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .flex-gap-small {
+        gap: 20px;
+    }
+
+    .flex-gap-medium {
+        gap: 17px;
+    }
+
+    .aegios_wrapper .font_20 {
+        font-size: 18px;
+    }
+
+    .aegios_wrapper .font_40 {
+        font-size: 32px;
+    }
+
+}
