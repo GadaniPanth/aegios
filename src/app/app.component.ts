@@ -16,24 +16,26 @@ export class AppComponent {
     document.body.style.overflow = value ? 'hidden' : '';
   }
 
-  toggleMenu(e: MouseEvent){
-    this.isMenuOpen = !this.isMenuOpen;
+  toggleMenu(e: MouseEvent) {
+    if (window.outerWidth <= 1280) {
+      this.isMenuOpen = !this.isMenuOpen;
+    }
   }
 
   isDropDownOpen: boolean = false;
 
-  toggleDropdown(){
+  toggleDropdown() {
     this.isDropDownOpen = !this.isDropDownOpen;
   }
   isDropDownOpen2: boolean = false;
 
-  toggleDropdown2(){
+  toggleDropdown2() {
     this.isDropDownOpen2 = !this.isDropDownOpen2;
   }
 
-  ngOnInit(){
-    document.addEventListener('keydown', (e)=>{
-      if(e.code.toLocaleLowerCase() == 'escape'){
+  ngOnInit() {
+    document.addEventListener('keydown', (e) => {
+      if (e.code.toLocaleLowerCase() == 'escape') {
         this.isMenuOpen = false;
       }
     })
