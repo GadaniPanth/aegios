@@ -1,6 +1,6 @@
 .aegios_wrapper {
-    .p-30 {
-        padding: 30px;
+    .ptb-30 {
+        padding: 30px 0;
     }
 
     ul.bg-color {
@@ -41,14 +41,12 @@
         align-items: center;
 
         h2 {
-            font-size: 30px;
             font-weight: 400;
             color: #ec2037;
         }
 
         p {
             font-weight: 400;
-            font-size: 18px;
             line-height: 25px;
         }
     }
@@ -57,21 +55,20 @@
     .section-3-main {
         .sec-3-detail {
             .sec-3-redbox {
-                max-width: 1000px;
                 background-image: linear-gradient(165deg, #ea243d, #0b0a15);
                 border-radius: 20px;
-                flex-direction: column;
                 justify-content: center;
-                align-items: center;
-                margin-left: auto;
                 margin-right: auto;
                 padding-top: 60px;
                 padding-bottom: 125px;
                 display: flex;
+                width: 58%;
+                padding: 60px 0 125px 0;
+                margin: 0 auto;
 
                 p {
-                    font-size: 17px;
-                    margin: 0 50px;
+                    margin: 0 110px;
+                    line-height: 25px;
                 }
             }
 
@@ -81,10 +78,29 @@
                 gap: 30px;
                 margin-top: -110px;
 
-                // .sec-3-box {
 
+                .sec-3-box {
+                    background-color: #fff;
+                    border: 1px solid #cecff5;
+                    border-radius: 16px;
+                    padding-top: 25px;
+                    padding-bottom: 25px;
+                    box-shadow: 0 29px 33px -5px rgba(30, 51, 94, .15);
+                    text-align: center;
+                    margin-top: 20px;
+                    transition: all 0.3s ease-in-out 0s;
 
-                // }
+                    &:hover {
+                        border: 1px solid #ea243d;
+                    }
+
+                    .counter {
+                        p {
+                            font-size: 30px;
+                            color: red;
+                        }
+                    }
+                }
             }
         }
     }
@@ -96,9 +112,8 @@
         background-position: center center;
 
         .sec-4-details {
-            padding: 4rem 9% 3rem;
+            padding: 64px;
             position: relative;
-            -webkit-backdrop-filter: saturate(180%) blur(1.25rem);
             background-color: #ffffffba;
             backdrop-filter: saturate(180%) blur(0.5rem);
             border-radius: 20px;
@@ -117,5 +132,273 @@
         p {
             font-size: 18px;
         }
+    }
+
+    // .page-loader-img {
+    //     position: fixed;
+    //     top: 0;
+    //     left: 0;
+    //     z-index: 9999;
+    //     width: 100dvw;
+    //     height: 100dvh;
+    //     background-color: white;
+    //     display: grid;
+    //     place-items: center;
+    //     opacity: 0;
+    //     animation: loader infinite linear;
+    //     pointer-events: none;
+    // }
+
+    .bg-linear-gradient {
+        background: linear-gradient(135deg, #ffeef0, #f4f8fd);
+
+        .sec-6-details {
+            padding: 50px 0 70px 0;
+
+            h3 {
+                font-weight: 400;
+            }
+        }
+
+        .sec-6-boxes {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+
+
+            .sec-6-box {
+                background-color: #fff;
+                border: 1px solid #cecff5;
+                border-radius: 16px;
+                padding: 20px 10px;
+                // gap: 8px;
+                // padding: 25px 10px;
+                box-shadow: 0 29px 33px -5px rgba(30, 51, 94, .15);
+                text-align: center;
+                margin-top: 20px;
+                transition: all 0.3s ease-in-out 0s;
+
+                &:hover {
+                    border: 1px solid #ea243d;
+                }
+
+                .counter {
+                    p {
+                        color: red;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media only screen and (max-width: 1680px) {}
+
+@media only screen and (max-width: 1600px) {}
+
+@media only screen and (max-width: 1440px) {
+
+    .container {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .aegios_wrapper .sec-5-details {
+        width: 65%;
+        margin: 0 auto;
+    }
+
+    .aegios_wrapper .sec-6-img {
+        width: 50%;
+        margin: 0 auto;
+    }
+
+    .section-5 {
+        padding-top: 50px;
+        padding-bottom: 30px;
+    }
+
+    .aegios_wrapper .section-3-main .sec-3-detail .sec-3-redbox {
+        width: 70%;
+    }
+}
+
+@media only screen and (max-width: 1366px) {
+
+    .container {
+        width: 85%;
+        margin: 0 auto;
+    }
+
+    .aegios_wrapper .section-3-main .sec-3-detail .sec-3-boxes .sec-3-box {
+        width: 90%;
+    }
+
+    .aegios_wrapper .section-3-main .sec-3-detail .sec-3-boxes {
+        gap: 0;
+        place-items: center;
+    }
+
+}
+
+@media only screen and (max-width: 1280px) {}
+
+@media only screen and (max-width: 1000px) {
+
+    .container {
+        width: 95%;
+        margin: 0 auto;
+    }
+
+    .aegios_wrapper .section-3-main .sec-3-detail .sec-3-boxes {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .aegios_wrapper .sec-5-details p {
+        font-size: 15px;
+    }
+
+    .aegios_wrapper .bg-linear-gradient .sec-6-boxes {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .aegios_wrapper .sec-6-img {
+        width: 60%;
+        margin: 0 auto;
+    }
+
+    .aegios_wrapper .section-3-main .sec-3-detail .sec-3-redbox p {
+        margin: 0 80px;
+    }
+
+    .aegios_wrapper .section-3-main .sec-3-detail .sec-3-redbox {
+        width: 90%;
+    }
+}
+
+@media only screen and (max-width: 991px) {
+
+    .container {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .ml-60 {
+        margin-left: 110px;
+    }
+
+    .txt-m-center {
+        text-align: center;
+    }
+
+    .aegios_wrapper .sec2-grid {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 30px;
+        align-items: center;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .aegios_wrapper .bg-about-us .sec-4-details {
+        padding: 44px;
+    }
+
+    .aegios_wrapper .section-3-main .sec-3-detail .sec-3-boxes {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .aegios_wrapper .section-3-main .sec-3-detail .sec-3-boxes .sec-3-box {
+        width: 100%;
+    }
+
+    .aegios_wrapper .sec-5-details {
+        width: 70%;
+        margin: 0 auto;
+    }
+
+    .aegios_wrapper .bg-linear-gradient .sec-6-boxes {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .flex-gap-small {
+        gap: 8px;
+    }
+}
+
+@media only screen and (max-width: 680px) {
+
+    .aegios_wrapper .sec-5-details {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .aegios_wrapper .sec-6-img {
+        width: 75%;
+        margin: 0 auto;
+    }
+}
+
+@media only screen and (max-width: 540px) {}
+
+@media only screen and (max-width: 486px) {
+
+    .container {
+        width: 95%;
+        margin: 0 auto;
+    }
+
+    .aegios_wrapper .section-3-main .sec-3-detail .sec-3-redbox {
+        width: 95%;
+    }
+
+    .aegios_wrapper .section-3-main .sec-3-detail .sec-3-redbox p {
+        margin: 0 52px;
+    }
+
+    .aegios_wrapper .sec-5-details {
+        width: 95%;
+        margin: 0 auto;
+    }
+
+    .aegios_wrapper .sec-6-img {
+        width: 82%;
+        margin: 0 auto;
+    }
+
+    .aegios_wrapper .font_17 {
+        font-size: 15px;
+    }
+}
+
+@media only screen and (max-width: 370px) {
+
+    .container {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .aegios_wrapper .font_23 {
+        font-size: 20px;
+    }
+
+    .aegios_wrapper .section-3-main .sec-3-detail .sec-3-redbox {
+        width: 90%;
+    }
+
+    .flex-gap-small {
+        gap: 20px;
+    }
+
+    .aegios_wrapper .bg-linear-gradient .sec-6-boxes {
+        gap: 0px;
+    }
+
+    .aegios_wrapper .section-3-main .sec-3-detail .sec-3-redbox p {
+        margin: 0 35px;
     }
 }
