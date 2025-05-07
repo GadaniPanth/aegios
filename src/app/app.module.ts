@@ -7,6 +7,9 @@ import { HomeComponent } from './home/home.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { QualityComponent } from './quality/quality.component';
 import { SustainabilityComponent } from './sustainability/sustainability.component';
+import { CareerComponent } from './career/career.component';
+import { ContactUsComponent } from './contact-us/contact-us.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -14,11 +17,16 @@ import { SustainabilityComponent } from './sustainability/sustainability.compone
     HomeComponent,
     AboutUsComponent,
     QualityComponent,
-    SustainabilityComponent
+    SustainabilityComponent,
+    CareerComponent,
+    ContactUsComponent
+
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

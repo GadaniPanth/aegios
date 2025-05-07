@@ -3,14 +3,6 @@
         padding: 30px 0;
     }
 
-    .pb-30 {
-        padding-bottom: 30px;
-    }
-
-    .pb-0 {
-        padding-bottom: 0 !important;
-    }
-
     ul.bg-color {
         background-color: #fff4f6;
         padding: 10px 16px;
@@ -40,71 +32,62 @@
             content: "/\00a0";
         }
     }
+}
 
-    .sustainability-h {
-        h2 {
-            color: #ec2037;
-            font-weight: 400;
-        }
-    }
+.form-group {
+    margin-bottom: 1.5rem;
+}
 
-    .dn {
-        display: none;
-    }
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
 
-    .sus-section-padding {
-        padding: 70px 0;
-    }
+.form-control {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+}
 
-    .section-3 {
-        background: url('src/assets/images/sustainability/sus-bg.jpg');
-        background-repeat: no-repeat;
-        background-size: auto;
-        background-position: center center;
+select.form-control {
+    height: calc(2.25rem + 2px);
+}
 
-        .sec-3-grid {
+.error-message {
+    color: #dc3545;
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+}
 
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 30px;
+.file-info {
+    margin-top: 0.5rem;
+    font-size: 0.875rem;
+    color: #6c757d;
+}
 
-            .sec-3-details {
-                padding: 30px;
-                position: relative;
-                background-color: #ffffffba;
-                backdrop-filter: saturate(180%) blur(0.5rem);
-                border-radius: 20px;
-            }
-        }
-    }
+.btn {
+    padding: 0.5rem 1.5rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+}
 
-    .section-4 {
-        .sec-4-box {
-            background-color: #fff;
-            border: 1px solid #cecff5;
-            border-radius: 16px;
-            padding: 25px 15px;
-            box-shadow: 0 29px 33px -5px rgba(30, 51, 94, .15);
-            text-align: center;
-            margin-top: 20px;
-            transition: all 0.3s ease-in-out 0s;
+.btn:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
 
-            &:hover {
-                border: 1px solid #ea243d;
-            }
-
-            .counter {
-                p {
-                    font-size: 30px;
-                    color: red;
-                }
-            }
-        }
-    }
-
-    .section-5 {
-        background: linear-gradient(135deg, #ffeef0, #f4f8fd);
-    }
+form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    padding: 50px 0;
 }
 
 
@@ -147,6 +130,14 @@
     .db {
         display: none;
     }
+
+    form {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 0;
+        padding-top: 0; 
+    }   
+    
 }
 
 @media only screen and (max-width: 991px) {
@@ -172,12 +163,6 @@
         font-size: 24px;
     }
 
-    .aegios_wrapper .section-3 .sec-3-grid {
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
-        gap: 30px;
-    }
-
     .aegios_wrapper .sus-section-padding {
         padding: 50px 0;
     }
@@ -194,9 +179,6 @@
         margin: 0 auto;
     }
 
-    .aegios_wrapper .font_17 {
-        font-size: 15px;
-    }
 }
 
 @media only screen and (max-width: 370px) {

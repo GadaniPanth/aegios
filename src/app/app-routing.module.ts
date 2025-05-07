@@ -4,6 +4,7 @@ import { HomeComponent } from "./home/home.component";
 import { AboutUsComponent } from "./about-us/about-us.component";
 import { QualityComponent } from "./quality/quality.component";
 import { SustainabilityComponent } from "./sustainability/sustainability.component";
+import { CareerComponent } from "./career/career.component";
 
 const routes: Routes = [
   {
@@ -22,6 +23,10 @@ const routes: Routes = [
     path: "sustainability",
     component: SustainabilityComponent,
   },
+  {
+    path: "career",
+    component: CareerComponent,
+  }
 ];
 
 @NgModule({

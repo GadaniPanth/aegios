@@ -1,0 +1,87 @@
+<div class="aegios_wrapper">
+    <section class="career-us-img">
+        <img src="assets/images/career/career.jpg" alt="">
+    </section>
+
+    <section>
+        <div class="container">
+            <div class="breadcrumb inner-flex ptb-30">
+                <ul class="bg-color">
+                    <li><a routerLink="/" class="red font_18">Home</a></li>
+                    <li><a class="font_18">Career</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <div class="form-heading ptb-30">
+                <h2 class="uppercase font_30 fw400 red-color">Career Opportunities</h2>
+            </div>
+
+            <div class="form">
+                <form #form="ngForm" (ngSubmit)="onSubmit(form)" novalidate>
+                    <!-- Contact Number Field -->
+                    <div class="form-group">
+                        <label for="contactNumber">Contact Number</label>
+                        <input type="text" id="contactNumber" name="contactNumber" [(ngModel)]="formData.contactNumber"
+                            #contactNumber="ngModel" class="form-control" placeholder="10 digit number" required
+                            pattern="^\d{10}$" (keypress)="onKeyPress($event)" maxlength="10">
+
+                        <div *ngIf="contactNumber.touched && contactNumber.errors" class="error-message">
+                            <div *ngIf="contactNumber.errors.required">Contact number is required</div>
+                            <div *ngIf="contactNumber.errors.pattern">Please enter exactly 10 digits (numbers only)
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Email Field -->
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" [(ngModel)]="formData.email" #email="ngModel"
+                            class="form-control" placeholder="Your email" required email>
+
+                        <div *ngIf="email.touched && email.errors" class="error-message">
+                            <div *ngIf="email.errors.required">Email is required</div>
+                            <div *ngIf="email.errors.email">Please enter a valid email</div>
+                        </div>
+                    </div>
+
+                    <!-- Functions Dropdown -->
+                    <div class="form-group">
+                        <label for="function">Functions</label>
+                        <select id="function" name="function" [(ngModel)]="formData.function" #function="ngModel"
+                            class="form-control" required>
+                            <option value="" disabled selected>Select a function</option>
+                            <option *ngFor="let func of functions" [value]="func">{{func}}</option>
+                        </select>
+
+                        <div *ngIf="function.touched && function.errors?.required" class="error-message">
+                            Please select a function
+                        </div>
+                    </div>
+
+                    <!-- File Upload -->
+                    <div class="form-group">
+                        <label for="file">Upload Resume</label>
+                        <input type="file" id="file" name="file" (change)="onFileChange($event)" class="form-control">
+
+                        <div *ngIf="selectedFile?.size > maxFileSize" class="error-message">
+                            File size exceeds 2MB limit
+                        </div>
+                        <div *ngIf="selectedFile" class="file-info">
+                            Selected: {{selectedFile.name}} ({{(selectedFile.size/1024/1024).toFixed(2)}} MB)
+                        </div>
+                        <p>(Please attach .doc or .docx or .pdf file of upto 2MB only)</p>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <button type="submit" class="btn btn-primary wmc">
+                        Submit
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+</div>
