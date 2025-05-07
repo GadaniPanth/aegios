@@ -11,12 +11,12 @@
       <div class="nav gap-120" [class.active]="isMenuOpen">
         <div class="logo"><a (click)="toggleMenu($event)" routerLink="/"><img src="assets/images/logo.png" alt=""></a>
         </div>
-        <div class="menu_btn font_20" (click)="toggleMenu($event)"><i class="fa-solid fa-bars"></i></div>
+        <div class="menu_btn font_30" (click)="toggleMenu($event)"><i class="fa-solid fa-bars"></i></div>
         <ul class="links flex-gap-small">
           <div class="menu_head">
             <div class="white_logo_mob"><a (click)="toggleMenu($event)" routerLink="/"><img src="assets/images/logo.png"
                   alt=""></a></div>
-            <div class="menu_close font_14" (click)="toggleMenu($event)"><i class="fa-solid fa-xmark"
+            <div class="menu_close font_30" (click)="toggleMenu($event)"><i class="fa-solid fa-xmark"
                 style="color: #ffffff;"></i></div>
           </div>
           <li class="link" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
