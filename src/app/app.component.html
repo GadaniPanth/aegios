@@ -9,36 +9,51 @@
   <header>
     <div class="nav-sticky w100">
       <div class="nav gap-120" [class.active]="isMenuOpen">
-        <div class="logo"><a routerLink="/" ><img src="assets/images/logo.png" alt=""></a></div>
+        <div class="logo"><a (click)="toggleMenu($event)" routerLink="/"><img src="assets/images/logo.png" alt=""></a>
+        </div>
         <div class="menu_btn font_20" (click)="toggleMenu($event)"><i class="fa-solid fa-bars"></i></div>
         <ul class="links flex-gap-small">
           <div class="menu_head">
-              <div class="white_logo_mob"><a routerLink="/" ><img src="assets/images/logo.png" alt=""></a></div>
-              <div class="menu_close font_14" (click)="toggleMenu($event)"><i class="fa-solid fa-xmark" style="color: #ffffff;"></i></div>
-            </div>
-          <li class="link" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}"><p class="font_14"><a routerLink="/" >home</a></p></li>
+            <div class="white_logo_mob"><a (click)="toggleMenu($event)" routerLink="/"><img src="assets/images/logo.png"
+                  alt=""></a></div>
+            <div class="menu_close font_14" (click)="toggleMenu($event)"><i class="fa-solid fa-xmark"
+                style="color: #ffffff;"></i></div>
+          </div>
+          <li class="link" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
+            <p class="font_14"><a (click)="toggleMenu($event)" routerLink="/">home</a></p>
+          </li>
           <li class="link" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
             <p class="font_14 dropdown_btn" (click)="toggleDropdown()">company <span>+</span></p>
-            <div class="dropdown wow fadeInUp" [class.openDD]="isDropDownOpen" data-wow-delay=".2s" data-wow-duration=".5s">
-              <p class="font_14"><a routerLink="/about-us" >About Us</a></p>
-              <p class="font_14"><a routerLink="/quality" >Quality</a></p>
-              <p class="font_14"><a routerLink="/vmv" >Vision Mission Values</a></p>
+            <div class="dropdown wow fadeInUp" [class.openDD]="isDropDownOpen" data-wow-delay=".2s"
+              data-wow-duration=".5s">
+              <p class="font_14"><a (click)="toggleMenu($event)" routerLink="/about-us">About Us</a></p>
+              <p class="font_14"><a (click)="toggleMenu($event)" routerLink="/quality">Quality</a></p>
+              <p class="font_14"><a (click)="toggleMenu($event)" routerLink="/vmv">Vision Mission Values</a></p>
             </div>
           </li>
 
           <li class="link" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
             <p class="font_14 dropdown_btn" (click)="toggleDropdown2()">products <span>+</span></p>
-            <div class="dropdown wow fadeInUp" [class.openDD]="isDropDownOpen2" data-wow-delay=".2s" data-wow-duration=".5s">
-              <p class="font_14"><a routerLink="/bopet-films" >BOPET Films</a></p>
-              <p class="font_14"><a routerLink="/metalized-films" >Metalized Films</a></p>
-              <p class="font_14"><a routerLink="/polyester" >Polyester Resins & Chips</a></p>
-              <p class="font_14"><a routerLink="/bopp-films" >BOPP Films (Coming Soon)</a></p>
+            <div class="dropdown wow fadeInUp" [class.openDD]="isDropDownOpen2" data-wow-delay=".2s"
+              data-wow-duration=".5s">
+              <p class="font_14"><a (click)="toggleMenu($event)" routerLink="/bopet-films">BOPET Films</a></p>
+              <p class="font_14"><a (click)="toggleMenu($event)" routerLink="/metalized-films">Metalized Films</a></p>
+              <p class="font_14"><a (click)="toggleMenu($event)" routerLink="/polyester">Polyester Resins & Chips</a>
+              </p>
+              <p class="font_14"><a (click)="toggleMenu($event)" routerLink="/bopp-films">BOPP Films (Coming Soon)</a>
+              </p>
             </div>
           </li>
-          
-          <li class="link" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}"><p class="font_14"><a routerLink="/sustainability">sustainability</a></p></li>
-          <li class="link" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}"><p class="font_14"><a routerLink="/career">career</a></p></li>
-          <li class="link" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}"><p class="font_14"><a routerLink="/contact-us">contact-us</a></p></li>
+
+          <li class="link" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
+            <p class="font_14"><a (click)="toggleMenu($event)" routerLink="/sustainability">sustainability</a></p>
+          </li>
+          <li class="link" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
+            <p class="font_14"><a (click)="toggleMenu($event)" routerLink="/career">career</a></p>
+          </li>
+          <li class="link" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
+            <p class="font_14"><a (click)="toggleMenu($event)" routerLink="/contact-us">contact-us</a></p>
+          </li>
         </ul>
         <div class="nav-overlay" (click)="toggleMenu($event)"></div>
       </div>
@@ -105,7 +120,8 @@
     <div class="footer-warning footer-bg">
       <div class="container">
         <div class="txt-m-center">
-          <span class="white-color lh-25">Disclaimer: Any use of the brand names/products are for illustration purpose only.
+          <span class="white-color lh-25">Disclaimer: Any use of the brand names/products are for illustration purpose
+            only.
             Company does not own the brand and would not entertain any claims whatsoever.</span>
         </div>
       </div>
