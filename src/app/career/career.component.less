@@ -33,6 +33,41 @@
         }
     }
 }
+.btn {
+    width: fit-content;
+    height: fit-content;
+    background: linear-gradient(
+      180deg,
+      #fa431800 15.22%,
+      #e92b4340 33.76%,
+      #e92b438f 58.49%,
+      #e92b438f 79.25%,
+      #e92b43 100%
+    );
+    border-radius: 20px;
+    display: inline-block;
+    position: relative;
+    z-index: 0;
+    padding: 10px 25px;
+    box-shadow: 5px 5px 5px 0px #bdc2c8;
+    border: none;
+    .font_20 {
+      color: #171151;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: -webkit-fill-available;
+      width: -webkit-fill-available;
+      background: #fff;
+      border-radius: 35px;
+      z-index: -1;
+      margin: 0px 2px 3px;
+    }
+  }
 
 .form-group {
     margin-bottom: 1.5rem;
@@ -68,20 +103,7 @@ select.form-control {
     color: #6c757d;
 }
 
-.btn {
-    padding: 0.5rem 1.5rem;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 1rem;
-}
 
-.btn:disabled {
-    background-color: #cccccc;
-    cursor: not-allowed;
-}
 
 form {
     display: grid;
