@@ -34,11 +34,14 @@
           <li class="link" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
             <p class="font_14 dropdown_btn" (click)="toggleDropdown2()">products <span>+</span></p>
             <div class="dropdown" [class.openDD]="isDropDownOpen2">
-              <p class="font_14"><a (click)="toggleMenu($event)" routerLink="/bopet-films">BOPET Films</a></p>
-              <p class="font_14"><a (click)="toggleMenu($event)" routerLink="/metalized-films">Metalized Films</a></p>
-              <p class="font_14"><a (click)="toggleMenu($event)" routerLink="/polyester">Polyester Resins & Chips</a>
+              <p class="font_14"><a (click)="toggleMenu($event)" routerLink="/products/bopet-films">BOPET Films</a></p>
+              <p class="font_14"><a (click)="toggleMenu($event)" routerLink="/products/metalized-films">Metalized
+                  Films</a></p>
+              <p class="font_14"><a (click)="toggleMenu($event)" routerLink="/products/polyester">Polyester Resins &
+                  Chips</a>
               </p>
-              <p class="font_14"><a (click)="toggleMenu($event)" routerLink="/bopp-films">BOPP Films (Coming Soon)</a>
+              <p class="font_14"><a (click)="toggleMenu($event)" routerLink="/products/bopp-films">BOPP Films (Coming
+                  Soon)</a>
               </p>
             </div>
           </li>

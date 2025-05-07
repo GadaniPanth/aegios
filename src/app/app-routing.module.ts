@@ -6,6 +6,7 @@ import { QualityComponent } from "./quality/quality.component";
 import { SustainabilityComponent } from "./sustainability/sustainability.component";
 import { CareerComponent } from "./career/career.component";
 import { ContactUsComponent } from "./contact-us/contact-us.component";
+import { ProductsComponent } from "./products/products.component";
 
 const routes: Routes = [
   {
@@ -32,10 +33,14 @@ const routes: Routes = [
     path: "contact-us",
     component: ContactUsComponent,
   },
+  {
+    path: "products/:product",
+    component: ProductsComponent,
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }

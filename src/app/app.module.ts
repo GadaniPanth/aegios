@@ -10,6 +10,7 @@ import { SustainabilityComponent } from './sustainability/sustainability.compone
 import { CareerComponent } from './career/career.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ProductsComponent } from './products/products.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     QualityComponent,
     SustainabilityComponent,
     CareerComponent,
-    ContactUsComponent
+    ContactUsComponent,
+    ProductsComponent
 
   ],
   imports: [

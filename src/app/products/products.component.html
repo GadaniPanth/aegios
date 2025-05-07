@@ -1,0 +1,55 @@
+<div class="aegios_wrapper">
+    <section [class]="product.name">
+        <img [src]="product.mainImage" [alt]="product.name">
+    </section>
+
+    <section>
+        <div class="container">
+            <div class="breadcrumb inner-flex ptb-30">
+                <ul class="bg-color">
+                    <li><a routerLink="/" class="red font_18">Home</a></li>
+                    <ng-container *ngIf="product.parent && product.name">
+                        <li><a class="font_18">{{product.parent}}</a></li>
+                        <li><a class="font_18">{{product.name}}</a></li>
+                    </ng-container>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="ptb-30">
+        <div class="container">
+            <div class="sec2-grid">
+                <div class="sec2-img">
+                    <img [src]="product.sec1Image" [alt]=" product.name">
+                </div>
+                <div class="sec2-details inner-flex">
+                    <h2 class="heading uppercase">
+                        {{product.name}}
+                    </h2>
+                    <!-- <p class=" mr-20">Aegios Polyfilms Private Limited is an emerging force in manufacturing sustainable
+                        BOPET films,
+                        Metalized, BOPP films, and Polyester (Resins &amp; Chips) in India. Born under the Atmanirbhar
+                        India Mission, we combine
+                        advanced European technologies with a strong focus on recycling and green production. The
+                        company has set up a state-of-the-art
+                        greenfield project in Logate district, Kathua, Jammu &amp; Kashmir, to manufacture BOPET &amp;
+                        Polyester Chips.
+                        The 10.6-meter BOPET line is currently operational, with the Resin plant set to commence
+                        operations in March 2024. Additionally,
+                        we are on track to commission the 10.4-meter BOPP line by the end of 2025. </p> -->
+                    <p class="mb-40">{{product.sec1Text}}</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- <section class="section-4 bg-about-us"> -->
+    <section class="section-4 bg-about-us" [ngStyle]="{ 'background-image': 'url(' + product.sec2BgImage + ')' }">
+        <div class="container section-padding">
+            <div class="sec-4-details">
+                <p class="txt-center font_17 black-color mb-25" *ngFor="let text of product.sec2Text">{{text}}</p>
+            </div>
+        </div>
+    </section>
+</div>
