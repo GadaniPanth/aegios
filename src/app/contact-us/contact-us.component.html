@@ -1,1 +1,153 @@
-<p>contact-us works!</p>
+<div class="aegios_wrapper">
+    <section class="contact-us-img">
+        <img src="assets/images/contact-us/contact.jpg" alt="">
+    </section>
+
+    <section class="section-1">
+        <div class="container inner-flex flex-gap-small">
+            <div class="breadcrumb inner-flex ptb-30">
+                <ul class="bg-color">
+                    <li><a routerLink="/" class="red font_18">Home</a></li>
+                    <li><a class="font_18">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <div class="contact-main inner-flex flex-gap-big flex-dir-row">
+                <div class="contact-left txt-center inner-flex flex-gap-medium">
+                    <div class="inner-flex">
+                        <div class="contact-box inner-flex alc">
+                            <div class="location-icon" style="width: 40px;">
+                                <img src="assets/images/contact-us/location.png" alt="">
+                            </div>
+                            <div class="contact-heading">
+                                <h2 class="red-color font_22 fw400">Corporate Office</h2>
+                            </div>
+                            <div class="contact-paragraph">
+                                <p>Ground Floor, W1, Inside lane of Newyork Timber, Iskon Ambli Road, Sarkhej -
+                                    Gandhinagar Hwy, Ahmedabad</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="inner-flex">
+                        <div class="contact-box inner-flex alc">
+                            <div class="location-icon" style="width: 40px;">
+                                <img src="assets/images/contact-us/location.png" alt="">
+                            </div>
+                            <div class="contact-heading">
+                                <h2 class="red-color font_22 fw400">Delhi Office</h2>
+                            </div>
+                            <div class="contact-paragraph">
+                                <p>Unit No 406, DLF Tower B, Jasola District Centre, New Delhi - 110025</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="inner-flex">
+                        <div class="contact-box inner-flex alc">
+                            <div class="location-icon" style="width: 40px;">
+                                <img src="assets/images/contact-us/location.png" alt="">
+                            </div>
+                            <div class="contact-heading">
+                                <h2 class="red-color font_22 fw400">Manufacturing Unit</h2>
+                            </div>
+                            <div class="contact-paragraph">
+                                <p>Survey No. 683 Min Khewat No 1/1 Min, Khata No 65/43 Village Logate Kathua Jammu and
+                                    Kashmir - 184104</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="inner-flex">
+                        <div class="contact-box inner-flex alc">
+                            <div class="location-icon" style="width: 40px;">
+                                <img src="assets/images/contact-us/contact.png" alt="">
+                            </div>
+                            <div class="contact-heading">
+                                <h2 class="red-color font_22 fw400">General Inquiries</h2>
+                            </div>
+                            <div class="contact-paragraph inner-flex black-color">
+                                <a href="tel:+919541899015" class="black-color font_17"><i class="fa fa-phone"></i>
+                                    +919541899015</a>
+                                <a href="mailto:inquiry@aegios.com" class="black-color font_17"><i
+                                        class="fa fa-envelope"></i> Inquiry@aegios.com</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-right inner-flex">
+                    <h2 class="uppercase font_30 fw400 red-color">We welcome your inquiries - Let's connect!</h2>
+
+                    <div class="form">
+                        <form #form="ngForm" (ngSubmit)="onSubmit(form)" novalidate>
+
+                            <!-- Name Field -->
+                            <div class="form-group">
+                                <label for="Name">Name</label>
+                                <input type="text" id="Name" name="Name" [(ngModel)]="formData.Name" #Name="ngModel"
+                                    class="form-control" placeholder="Enter Your Name">
+
+                                <div *ngIf="Name.touched && Name.errors" class="error-message">
+                                    <div *ngIf="Name.errors.required">Name is required</div>
+                                </div>
+                            </div>
+
+                            <!-- Email Field -->
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" [(ngModel)]="formData.email"
+                                    #email="ngModel" class="form-control" placeholder="Enter Your email" required email>
+
+                                <div *ngIf="email.touched && email.errors" class="error-message">
+                                    <div *ngIf="email.errors.required">Email is required</div>
+                                    <div *ngIf="email.errors.email">Please enter a valid email</div>
+                                </div>
+                            </div>
+
+                            <!-- Contact Number Field -->
+                            <div class="form-group">
+                                <label for="contactNumber">Contact Number</label>
+                                <input type="text" id="contactNumber" name="contactNumber"
+                                    [(ngModel)]="formData.contactNumber" #contactNumber="ngModel" class="form-control"
+                                    placeholder="Enter Your Contact Number" required pattern="^\d{10}$"
+                                    (keypress)="onKeyPress($event)" maxlength="10">
+
+                                <div *ngIf="contactNumber.touched && contactNumber.errors" class="error-message">
+                                    <div *ngIf="contactNumber.errors.required">Contact number is required</div>
+                                    <div *ngIf="contactNumber.errors.pattern">Please enter exactly 10 digits (numbers
+                                        only)
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Contact Name Field -->
+                            <div class="form-group">
+                                <label for="companyName">companyName</label>
+                                <input type="text" id="companyName" name="companyName" [(ngModel)]="formData.companyName" #companyName="ngModel"
+                                    class="form-control" placeholder="Company Name">
+
+                                <div *ngIf="Name.touched && Name.errors" class="error-message">
+                                    <div *ngIf="Name.errors.required">Name is required</div>
+                                </div>
+                            </div>
+
+                            <!-- Country Dropdown -->
+                            <div class="form-group">
+                                <label for="Country">Country</label>
+                                <select id="Country" name="Country" [(ngModel)]="formData.Country"
+                                    #Country="ngModel" class="form-control" required>
+                                    <option *ngFor="let country of country" [value]="contry">{{country}}</option>
+                                </select>
+
+                                <div *ngIf="country.touched && country.errors?.required" class="error-message">
+                                    Please select a Country
+                                </div>
+                            </div>
+                            <!-- Submit Button -->
+                            <button type="submit" class="btn wmc font_17">
+                                Submit <i class="fa-solid fa-paper-plane planicon" style="margin-left: 10px;"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

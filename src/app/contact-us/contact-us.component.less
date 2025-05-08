@@ -1,0 +1,139 @@
+.aegios_wrapper {
+    .ptb-30 {
+        padding: 30px 0;
+    }
+
+    .pb-30 {
+        padding-bottom: 30px;
+    }
+
+    .pb-0 {
+        padding-bottom: 0 !important;
+    }
+
+    ul.bg-color {
+        background-color: #fff4f6;
+        padding: 10px 16px;
+        list-style: none;
+
+        li {
+            display: inline;
+
+            a {
+                &.red {
+                    color: #e82a43;
+
+                    &:hover {
+                        color: black;
+                    }
+                }
+            }
+
+            a {
+                color: black;
+            }
+        }
+
+        li+li:before {
+            padding: 8px;
+            color: black;
+            content: "/\00a0";
+        }
+    }
+
+    .contact-left {
+        width: 26%;
+    }
+
+    .contact-box {
+        border: 1px solid #ECEEF3;
+        padding: 50px 25px 40px 25px;
+        border-radius: 5px;
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+            border: 1px solid #e82a43
+        }
+    }
+
+
+    .form-group {
+        margin-bottom: 1.5rem;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 0.5rem;
+        font-weight: 500;
+    }
+
+    .form-control {
+        width: 100%;
+        padding: 0.5rem;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        font-size: 1rem;
+        box-shadow: 0 0px 15px #e2e8f0;
+    }
+
+    select.form-control {
+        height: calc(2.25rem + 2px);
+    }
+
+    .error-message {
+        color: #dc3545;
+        font-size: 0.875rem;
+        margin-top: 0.25rem;
+    }
+
+    .file-info {
+        margin-top: 0.5rem;
+        font-size: 0.875rem;
+        color: #6c757d;
+    }
+
+
+
+    form {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+        padding: 50px 0;
+    }
+
+    .btn {
+        width: fit-content;
+        height: fit-content;
+        background: linear-gradient(180deg,
+                #fa431800 15.22%,
+                #e92b4340 33.76%,
+                #e92b438f 58.49%,
+                #e92b438f 79.25%,
+                #e92b43 100%);
+        border-radius: 20px;
+        display: inline-block;
+        position: relative;
+        z-index: 0;
+        padding: 10px 25px;
+        box-shadow: 5px 5px 5px 0px #bdc2c8;
+        border: none;
+        cursor: pointer;
+
+        .font_20 {
+            color: #171151;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: -webkit-fill-available;
+            width: -webkit-fill-available;
+            background: #fff;
+            border-radius: 35px;
+            z-index: -1;
+            margin: 0px 2px 3px;
+        }
+    }
+}

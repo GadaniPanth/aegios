@@ -1,15 +1,40 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
 
 @Component({
-  selector: 'app-contact-us',
-  templateUrl: './contact-us.component.html',
-  styleUrls: ['./contact-us.component.less']
+  selector: "app-contact-us",
+  templateUrl: "./contact-us.component.html",
+  styleUrls: ["./contact-us.component.less"],
 })
 export class ContactUsComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
+  ngOnInit() {}
+  maxFileSize = 2 * 1024 * 1024; 
+  selectedFile: File | null = null;
+  formData = {
+    contactNumber: "",
+    email: "",
+    country: "",
+    file: null,
+    Name:""
+  };
 
-  ngOnInit() {
+  country = [
+    "Afghanistan",
+  ];
+
+
+  onKeyPress(event: KeyboardEvent) {
+    const charCode = event.which ? event.which : event.keyCode;
+    if (charCode < 48 || charCode > 57) {
+      event.preventDefault();
+    }
   }
-
+  onSubmit(form: any) {
+    if (form.valid) {
+      console.log("Form submitted:", this.formData);
+    } else {
+      alert("Please fill all required fields correctly");
+    }
+  }
 }
