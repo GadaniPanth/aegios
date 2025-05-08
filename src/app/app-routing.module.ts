@@ -7,6 +7,7 @@ import { SustainabilityComponent } from "./sustainability/sustainability.compone
 import { CareerComponent } from "./career/career.component";
 import { ContactUsComponent } from "./contact-us/contact-us.component";
 import { ProductsComponent } from "./products/products.component";
+import { VmvComponent } from "./vmv/vmv.component";
 
 const routes: Routes = [
   {
@@ -37,6 +38,10 @@ const routes: Routes = [
     path: "products/:product",
     component: ProductsComponent,
   },
+  {
+    path:"vmv",
+    component: VmvComponent
+  }
 ];
 
 @NgModule({

@@ -11,6 +11,7 @@ import { CareerComponent } from './career/career.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ProductsComponent } from './products/products.component';
+import { VmvComponent } from './vmv/vmv.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { ProductsComponent } from './products/products.component';
     SustainabilityComponent,
     CareerComponent,
     ContactUsComponent,
-    ProductsComponent
+    ProductsComponent,
+    VmvComponent
 
   ],
   imports: [

@@ -1,0 +1,269 @@
+.aegios_wrapper {
+
+    .section-1 {
+        background: linear-gradient(14deg, #ffeef0, #f4f8fd);
+    }
+
+    .ptb-30 {
+        padding: 30px 0;
+    }
+
+    .pb-30 {
+        padding-bottom: 30px;
+    }
+
+    .pb-0 {
+        padding-bottom: 0 !important;
+    }
+
+    .pb-60 {
+        padding-bottom: 60px;
+    }
+
+    ul {
+        padding: 10px 16px;
+        list-style: none;
+
+        li {
+            display: inline;
+
+            a {
+                &.red {
+                    color: #e82a43;
+
+                    &:hover {
+                        color: black;
+                    }
+                }
+            }
+
+            a {
+                color: black;
+            }
+        }
+
+        li+li:before {
+            padding: 8px;
+            color: black;
+            content: "/\00a0";
+        }
+    }
+
+    .tab-container {
+        margin: auto;
+        border-radius: 8px;
+    }
+
+    .tabs {
+        display: flex;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        width: 80%;
+        margin: 0 auto;
+        gap: 10px;
+    }
+
+    .tab {
+        flex: 1;
+        padding: 24px 120px;
+        text-align: center;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        font-weight: bold;
+        color: #8A879F;
+        background-color: white;
+        transition: background-color 0.3s, color 0.3s;
+    }
+
+    .tab:hover {
+        color: #ea243d;
+    }
+
+    .tab.active {
+        color: #171151;
+        background: white;
+        border-bottom: 4px solid #ea243d;
+    }
+
+    .tab-content {
+        padding: 20px;
+    }
+
+    .content {
+        display: none;
+    }
+
+    .content.active {
+        display: block;
+    }
+
+    .vmv-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 40px;
+
+        .icon {
+            background-color: #ea243d;
+            height: 60px;
+            width: 60px;
+            line-height: 60px;
+            display: inline-flex;
+            border-radius: 50%;
+            position: relative;
+            // margin: 5px 0 22px 5px;
+
+            img {
+                margin: auto;
+                width: auto;
+            }
+        }
+    }
+}
+
+
+@media only screen and (max-width: 1680px) {}
+
+@media only screen and (max-width: 1600px) {}
+
+@media only screen and (max-width: 1440px) {
+
+    .container {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+}
+
+@media only screen and (max-width: 1366px) {
+
+    .container {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+}
+
+@media only screen and (max-width: 1280px) {
+
+
+    .aegios_wrapper .tabs {
+        width: 100%;
+    }
+
+    .aegios_wrapper .tab {
+        padding: 24px 82px;
+    }
+
+    .aegios_wrapper .vmv-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+
+    .container {
+        width: 95%;
+        margin: 0 auto;
+    }
+
+    .dn {
+        display: block !important;
+    }
+
+    .db {
+        display: none;
+    }
+
+    .aegios_wrapper .vmv-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+
+}
+
+@media only screen and (max-width: 991px) {
+
+    .container {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .aegios_wrapper .tab {
+        padding: 15px 15px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+
+    .flex-gap-small {
+        gap: 8px;
+    }
+}
+
+@media only screen and (max-width: 680px) {}
+
+@media only screen and (max-width: 540px) {
+
+    .aegios_wrapper .font_30 {
+        font-size: 24px;
+    }
+
+    .aegios_wrapper .vmv-grid {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 20px;
+        text-align: center;
+    }
+
+    .aegios_wrapper .vmv-grid .icon {
+        margin: auto;
+    }
+
+    .vmv-details{
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 486px) {
+
+    .container {
+        width: 95%;
+        margin: 0 auto;
+    }
+
+    .aegios_wrapper .font_17 {
+        font-size: 15px;
+    }
+
+    .tabs{
+        flex-direction: column;
+    }
+}
+
+@media only screen and (max-width: 370px) {
+
+    .container {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .flex-gap-small {
+        gap: 20px;
+    }
+
+    .flex-gap-medium {
+        gap: 17px;
+    }
+
+    .aegios_wrapper .font_20 {
+        font-size: 18px;
+    }
+
+    .aegios_wrapper .font_40 {
+        font-size: 32px;
+    }
+
+}

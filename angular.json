@@ -25,12 +25,12 @@
             "aot": false,
             "assets": [
               "src/favicon.ico",
-              "src/assets",
-              "node_modules/aos/dist/aos.css"
+              "src/assets"
             ],
             "styles": [
               "node_modules/swiper/swiper-bundle.min.css",
-              "src/styles.less"
+              "src/styles.less",
+              "node_modules/aos/dist/aos.css"
             ],
             "scripts": []
           },

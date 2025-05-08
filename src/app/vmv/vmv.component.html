@@ -1,0 +1,130 @@
+<div class="aegios_wrapper">
+    <section class="vmv-img">
+        <img src="assets/images/vmv/vmv.jpg" alt="">
+    </section>
+
+    <section class="section-1">
+        <div class="container inner-flex flex-gap-medium pb-60">
+            <div class="breadcrumb inner-flex ptb-30">
+                <ul>
+                    <li><a routerLink="/" class="red font_18">Home</a></li>
+                    <li><a class="font_18 uppercase">vmv</a></li>
+                </ul>
+            </div>
+            <div class="vmv-panel">
+                <div class="tab-container">
+                    <div class="tabs">
+                        <button class="tab font_14" *ngFor="let tab of tabs" [class.active]="activeTab === tab.id"
+                            (click)="selectTab(tab.id)">
+                            {{ tab.label }}
+                        </button>
+                    </div>
+
+                    <div class="tab-content">
+                        <div *ngFor="let tab of tabs" [id]="tab.id" class="content"
+                            [class.active]="activeTab === tab.id" [ngStyle]="{'text-align': tab.align}">
+                            <h2>{{ tab.title }}</h2>
+                            <p>{{ tab.content }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="ptb-30 section-2">
+        <div class="container">
+            <div class="inner-flex flex-gap-medium">
+                <div class="vmv-details inner-flex">
+                    <div class="vmv-h">
+                        <h2 class="uppercase font_30 red-color">Our Core Values</h2>
+                    </div>
+                    <div class="vmv-p">
+                        <p class="font_17">At our core, we THRIVE together and fuel our success by Treasuring customer
+                            relationships, Harnessing innovation in everything we do, Revolutionizing growth and
+                            potential, Implementing agile actions, Valuing excellence, and Ensuring safety and
+                            compliance.</p>
+                    </div>
+                </div>
+
+                <div class="vmv-grid">
+                    <div class="inner-flex pb-30">
+                        <div class="icon relative">
+                            <img src="assets/images/vmv/customer-focus.png" alt="">
+                        </div>
+                        <div class="vmv-heading">
+                            <h4 class="red-color font_24 fw400">Customer focus</h4>
+                        </div>
+                        <div class="vmv-paragraph">
+                            <p class="lh-25 font_15">Delivering exceptional value and building lasting relationships
+                                through customer-centric
+                                solutions.</p>
+                        </div>
+                    </div>
+                    <div class="inner-flex pb-30">
+                        <div class="icon relative">
+                            <img src="assets/images/vmv/innovation.png" alt="">
+                        </div>
+                        <div class="vmv-heading">
+                            <h4 class="red-color font_24 fw400">Innovation</h4>
+                        </div>
+                        <div class="vmv-paragraph">
+                            <p class="lh-25 font_15">Empowering innovation at every level, while cultivating a dynamic
+                                environment that sparks growth and problem-solving attitude.</p>
+                        </div>
+                    </div>
+                    <div class="inner-flex pb-30">
+                        <div class="icon relative">
+                            <img src="assets/images/vmv/growth.png" alt="">
+                        </div>
+                        <div class="vmv-heading">
+                            <h4 class="red-color font_24 fw400">Growth is life</h4>
+                        </div>
+                        <div class="vmv-paragraph">
+                            <p class="lh-25 font_15">Embracing a culture of continuous growth and nurturing
+                                opportunities to build a resilient foundation.</p>
+                        </div>
+                    </div>
+                    <div class="inner-flex pb-30">
+                        <div class="icon relative">
+                            <img src="assets/images/vmv/agile.png" alt="">
+                        </div>
+                        <div class="vmv-heading">
+                            <h4 class="red-color font_24 fw400">Agile & quick in action</h4>
+                        </div>
+                        <div class="vmv-paragraph">
+                            <p class="lh-25 font_15">Driving agility and swift execution to stay ahead in a fast-paced
+                                business landscape.</p>
+                        </div>
+                    </div>
+                    <div class="inner-flex pb-30">
+                        <div class="icon relative">
+                            <img src="assets/images/vmv/excellence.png" alt="">
+                        </div>
+                        <div class="vmv-heading">
+                            <h4 class="red-color font_24 fw400">Excellence
+                            </h4>
+                        </div>
+                        <div class="vmv-paragraph">
+                            <p class="lh-25 font_15">Pursuing excellence in every aspect of our business to exceed
+                                expectations and drive superior results.</p>
+                        </div>
+                    </div>
+                    <div class="inner-flex pb-30">
+                        <div class="icon relative">
+                            <img src="assets/images/vmv/safety.png" alt="">
+                        </div>
+                        <div class="vmv-heading">
+                            <h4 class="red-color font_24 fw400">Safety and compliance</h4>
+                        </div>
+                        <div class="vmv-paragraph">
+                            <p class="lh-25 font_15">Putting safety first in all operations and promoting a culture of
+                                compliance that protects the health and well-being of our employees and communities.
+                                Shape1.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
