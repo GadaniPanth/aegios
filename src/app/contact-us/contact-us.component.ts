@@ -17,10 +17,10 @@ export class ContactUsComponent implements OnInit {
     country: "",
     file: null,
     Name: "",
+    // formData: ""
   };
 
-  country = ["Afghanistan",];
-
+  countries = ["Afghanistan"];
 
   interested_in = [
     "BOPET Films",
@@ -29,7 +29,9 @@ export class ContactUsComponent implements OnInit {
     "BOPP Films (comming soon)",
     "other",
   ];
-
+  // formData = {
+  //   Country: this.countries[1];
+  // }
   onKeyPress(event: KeyboardEvent) {
     const charCode = event.which ? event.which : event.keyCode;
     if (charCode < 48 || charCode > 57) {
