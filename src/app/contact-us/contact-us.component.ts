@@ -9,21 +9,29 @@ export class ContactUsComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {}
-  maxFileSize = 2 * 1024 * 1024; 
+  maxFileSize = 2 * 1024 * 1024;
   selectedFile: File | null = null;
   formData = {
     contactNumber: "",
     email: "",
     country: "",
     file: null,
-    Name:""
+    Name: "",
+    // formData: ""
   };
 
-  country = [
-    "Afghanistan",
+  countries = ["Afghanistan"];
+
+  interested_in = [
+    "BOPET Films",
+    "Metallised Films",
+    "Polyster Resins & Chips",
+    "BOPP Films (comming soon)",
+    "other",
   ];
-
-
+  // formData = {
+  //   Country: this.countries[1];
+  // }
   onKeyPress(event: KeyboardEvent) {
     const charCode = event.which ? event.which : event.keyCode;
     if (charCode < 48 || charCode > 57) {
