@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { ProductDataService } from '../product-data.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Location } from '@angular/common';
@@ -9,7 +9,7 @@ import Swiper, { Autoplay } from 'swiper';
   templateUrl: './products.component.html',
   styleUrls: ['./products.component.less']
 })
-export class ProductsComponent implements OnInit {
+export class ProductsComponent implements OnInit, AfterViewInit {
   swiper!: Swiper;
   product: any;
   tableHeaders: any[] = [];
@@ -26,20 +26,24 @@ export class ProductsComponent implements OnInit {
     this.route.paramMap.subscribe(params => {
       const slug = params.get('product');
       const product = this.productDataService.getProductBySlug(slug);
-      const tableLen: number = 0;
+      this.tableHeaders = []; // Reset to avoid accumulation
+      this.haveTypeOf = false;
 
       if (product) {
         this.product = product;
-        console.log(product.table[0]['rows']);
-        console.log(product.table[0]['rows'][0]);
-        console.log(product.table[0]['rows'][0]['category']);
+
+        // Rebuild table headers
         if (Object.keys(product.table[0])[0] == 'typeof') {
           this.tableHeaders.push('Type of film');
           this.haveTypeOf = true;
         }
+
         Object.keys(product.table[0]['rows'][0]).forEach(key => {
-          this.tableHeaders.push(key)
-        })
+          this.tableHeaders.push(key);
+        });
+
+        // You may also want to re-initialize Swiper here if needed
+        setTimeout(() => this.initSwiper(), 0); // Wait for DOM
       } else {
         this.router.navigate(['/']);
       }
@@ -47,11 +51,12 @@ export class ProductsComponent implements OnInit {
   }
 
   ngAfterViewInit(): void {
-    // Swiper.use([Navigation]);
-    // Swiper.use([EffectFade]);
-    // Swiper.use([EffectFlip]);
-    Swiper.use([Autoplay]);
+    // Moved swiper init to its own method
+    this.initSwiper();
+  }
 
+  private initSwiper() {
+    Swiper.use([Autoplay]);
     this.swiper = new Swiper(".swiper-container", {
       slidesPerView: 'auto',
       spaceBetween: 30,
@@ -66,5 +71,4 @@ export class ProductsComponent implements OnInit {
       loop: true,
     });
   }
-
 }
