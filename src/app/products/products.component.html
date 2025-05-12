@@ -59,7 +59,8 @@
             <h2 class="font_30">Product Features</h2>
         </div>
         <div class="feature_card_container d_flex flex-gap-small mtb0">
-            <div class="feature_card mb-25" *ngFor="let feature of product.sec4Icon; let i = index;">
+            <div class="feature_card mb-25" *ngFor="let feature of product.sec4Icon; let i = index;"
+                [class.h240]="product.slug == 'bopp-films'">
                 <div class="icon">
                     <img [src]="product.sec4Icon[i]" [alt]="product.name">
                 </div>

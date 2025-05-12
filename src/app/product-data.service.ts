@@ -20,18 +20,66 @@ export class ProductDataService {
       sec5Text: ['Co polyester coated films', 'Twist wrap grade', 'Balance shrinkage', 'Poly urethane coated film', 'Melamine free acrylic coated film'],
       table: [
         {
-          Category: 'Bottle grade',
-          Application: 'Specifically designed for the packaging of beverages, including carbonated drinks, mineral and drinking water, edible oil, liquor, and more.'
+          Category: 'Plain and corona treated',
+          Thickness: '8, 10, 12, 15, 23, 30, 36',
+          Application: 'Packaging: Ideal for both food and non-food packaging needs. Printing and Lamination: Perfect for high-quality printing and laminating applications. Plasma Metallization: Suitable for plasma metallization processes. Industrial Applications: Used in insulation tapes and carton lamination, particularly compatible with solvent-based ink systems.'
         },
         {
-          Category: 'Bottle Textile grade',
-          Application: 'Ideal for the processing of polyester filament or yarn, such as POY and FDY. It is available in various finishes including Textile Semi Dull, Super Bright, Full Dull, Homo Bright, Textile Cationic Semi Dull, and Textile Cationic Bright.'
+          Category: 'Co-polyester coated',
+          Thickness: '12, 15, 23, 30',
+          Application: 'Dry Food and Confectionery Packaging: Ideal for packaging milk powder, tea, coffee, and powdered juices. Versatile for Various Products: Suitable for packaging less aggressive mediums such as shampoo, honey, liquor, oil, and more.'
         },
         {
-          Category: 'Film grade',
-          Application: 'Suitable for manufacturing of BOPET films. It is available in Film Bright and Film Silica variants, ensuring excellent performance in film production.'
+          Category: 'Anti-static films and high slip',
+          Thickness: '12, 15, 23, 30',
+          Application: 'Electronic Packaging. ESD (Electrostatic Discharge) Bags: Utilized to create effective ESD bags, providing protection against static electricity and safeguarding sensitive electronic components. CMOS Packaging: CMOS (Complementary Metal-Oxide-Semiconductor) packaging, ensuring secure and reliable containment for these delicate electronic devices.'
+        },
+        {
+          Category: 'Chemically coated film for hot fills retort',
+          Thickness: '12, 15, 23, 30',
+          Application: 'High-performance Applications. Pasteurization and Retort Processes: Providing exceptional heat resistance for both semi and full retort conditions. Metallized Version for Hot Fills: Ensuring excellent barrier properties and preserving the integrity of the packaged contents. Aseptic Packaging: Suitable for aggressive mediums, including beverages, sauces, and other challenging products, such as in Bag-in-Box (BIB) applications.'
+        },
+        {
+          Category: 'Twist wrap grade',
+          Thickness: '15, 18, 23',
+          Application: 'Confectionery Industry. Chocolate Twist Wrap: Ensuring attractive presentation and secure wrapping. Lollipop Twist Wrap: Offering reliable sealing and protection while maintaining the visual appeal of the product.'
+        },
+        {
+          Category: 'Yarn and stamping foil grade',
+          Thickness: '12, 15, 23',
+          Application: 'Textile Yarn: Providing strength and durability. Stamping Foil: Enabling the creation of intricate designs and patterns in industries like printing, labeling, and packaging.'
+        },
+        {
+          Category: 'Release liner',
+          Thickness: '12, 23, 36',
+          Application: 'Excellent base material for silicone release liners, providing a smooth and reliable surface for the silicone coating.'
+        },
+        {
+          Category: 'Ultra-clear',
+          Thickness: '12, 23, 30, 36, 50, 75',
+          Application: 'Printing: Offering a smooth surface and excellent ink adhesion for high-quality printing results. Labels: Providing durability and enhanced aesthetics to labels for various products and industries. Imaging: Utilized in imaging applications, such as medical imaging films or photographic prints, delivering exceptional clarity and image quality. Industrial Applications: Utility in numerous industrial applications, where reliability and performance are crucial.'
+        },
+        {
+          Category: 'Balance shrinkage',
+          Thickness: '8, 10, 12',
+          Application: 'Extrusion Lamination: Providing a strong bond between different materials for composite structures. Coating: Offers improved properties such as enhanced ink adhesion, moisture resistance, and barrier properties.'
+        },
+        {
+          Category: 'Isotropic',
+          Thickness: '8, 10, 12',
+          Application: 'Highly valued for their exceptional barrier properties, making them an ideal choice for lidding applications that require high barrier performance.'
+        },
+        {
+          Category: 'Polyurethane coated film',
+          Thickness: '12',
+          Application: 'Recognized for their suitability in aseptic applications, particularly in the premium segments of Bag-in-Box (BIB) packaging.'
+        },
+        {
+          Category: 'Melamine free acrylic coated film',
+          Thickness: '8, 10, 12',
+          Application: 'Specifically designed to withstand rigorous processing methods such as retort, pasteurization, and sterilization.'
         }
-      ],
+      ]
     },
     {
       slug: 'metalized-films',
@@ -86,6 +134,112 @@ export class ProductDataService {
         {
           Category: 'Film grade',
           Application: 'Suitable for manufacturing of BOPET films. It is available in Film Bright and Film Silica variants, ensuring excellent performance in film production.'
+        }
+      ],
+    },
+    {
+      slug: 'bopp-films',
+      parent: 'Products',
+      name: 'BOPP Films',
+      mainImage: 'assets/images/products/bopp/bopp-film.jpg',
+      sec1Image: 'assets/images/products/polyester/resin1.png',
+      sec1Text: 'BOPP films (Biaxially Oriented PolyPropylene Films) are a game-changer in the packaging industry. With excellent moisture barrier properties and high clarity, BOPP films are the preferred choice for food packaging worldwide. They extend the shelf life of products, reducing food waste, and maintain consistent seal integrity, ensuring product quality and freshness.',
+      sec2BgImage: 'assets/images/products/polyester/resin-inner-1.png',
+      sec2Text: ['BOPP films contribute to sustainability efforts with their low carbon footprint and recyclability. These films offer endless possibilities for aesthetic appeal, with options for transparent, white opaque, and metallized variants, allowing for eye-catching graphics and attractive packaging. Benefit from the unique density advantage of BOPP films, ensuring more yield and lighter rolls for efficient handling.',],
+      sec4Icon: ['assets/images/products/polyester/feature1.png', 'assets/images/products/polyester/feature2.png', 'assets/images/products/polyester/feature3.png'],
+      sec4Text: ['Label Grade Films produced from 5-Layers BOPP offer varying gloss and density options, impacting yield. They also provide high heat seal strength (> 1000 gm/25mm) for secure packaging and superior label performance.', 'Advanced Hi-Res metallising machines ensure uniform aluminum deposition on film substrates, resulting in consistent barrier properties and enhanced packaging performance.', 'Metallized OPP films offer optical density options ranging from 1.8 to 3.0, allowing you to achieve the desired level of opacity and visual impact for your specific applications.'],
+      sec5Image: ['assets/images/products/polyester/resin-apln-1.jpg', 'assets/images/products/polyester/resin-apln-2.jpg', 'assets/images/products/polyester/resin-apln-3.jpg', 'assets/images/products/polyester/resin-apln-4.jpg', 'assets/images/products/polyester/resin-apln-5.jpg', 'assets/images/products/polyester/resin-apln-6.jpg'],
+      sec5Text: ['Transparent non heat sealable', 'Matallizable', 'Metallizable heat sealable', 'Labels (transparent & pearlized)', 'Overwrap (transparent & white opaque)', 'White opaque (solid)'],
+      table: [
+        {
+          Category: 'Transparent non heat sealable',
+          Thickness: '9, 10, 12, 15, 18, 20, 25, 30',
+          Application: 'Ideal for reverse printing, lamination, and conversion processes, offering versatility and excellent print quality.'
+        },
+        {
+          Category: 'Transparent non heat sealable',
+          Thickness: '15, 18, 20, 25, 30, 35, 40, 50',
+          Application: 'Well-suited for single/two-ply printing, lamination, inner wrapping of confectionery products, and the production of bags and pouches.'
+        },
+        {
+          Category: 'Matallizable',
+          Thickness: '9, 10, 12, 15, 18, 20, 25',
+          Application: 'Reliable base film for aluminum metallization, enabling decorative applications and sandwich lamination in various industries.'
+        },
+        {
+          Category: 'Metallizable heat sealable',
+          Thickness: '15, 18, 20, 25, 30, 40',
+          Application: 'Specifically designed base films for aluminum vacuum metallization, these films facilitate higher speed filling and sealing (FFS) machine operations.'
+        },
+        {
+          Category: 'White opaque (solid)',
+          Thickness: '15, 18, 20, 25, 30, 35, 40',
+          Application: 'Provides exceptional single/two ply printing and lamination properties, ensuring attractive packaging solutions for confectionery products.'
+        },
+        {
+          Category: 'White pearlized (cavitated)',
+          Thickness: '25, 30, 35, 40, 45',
+          Application: 'Single/two-ply printing, lamination, and confectionery packaging, making them well-suited for high-speed packaging applications.'
+        },
+        {
+          Category: 'Matte',
+          Thickness: '12, 13, 15, 18, 20, 25, 30',
+          Application: 'Suitable for reverse printing, lamination, and conversion processes, offering versatility and compatibility with various conversion techniques.'
+        },
+        {
+          Category: 'Labels (transparent & pearlized)',
+          Thickness: '15, 18, 20, 25, 30, 35, 40, 45',
+          Application: 'Ideal for high-speed label machines, enabling efficient and precise application in wrap-around, roll fed, and pressure-sensitive label formats.'
+        },
+        {
+          Category: 'Overwrap (transparent & white opaque)',
+          Thickness: '18, 20, 25, 30',
+          Application: 'Excellent for high-speed bundle overwrapping applications, providing reliable packaging solutions for CD/cassette/paperboard boxes.'
+        },
+        {
+          Category: 'Flower overwrap',
+          Thickness: '15, 18, 21, 23, 25, 37, 45, 50',
+          Application: 'Flower overwrapping, conversion processes, textile bag production, adhesive tape manufacturing, and photo album applications.'
+        },
+        {
+          Category: 'Release film',
+          Thickness: '12, 15, 18, 20, 25, 30',
+          Application: 'Effective release film for plywood and decorative lamination, ensuring smooth and efficient production processes.'
+        },
+        {
+          Category: 'Adhesive tapes & textile grade',
+          Thickness: '21, 23, 25, 37, 45, 50',
+          Application: 'Suitable for pressure-sensitive adhesive tape manufacturing and textile bag production, offering excellent performance and durability.'
+        },
+        {
+          Category: 'Antifog',
+          Thickness: '25, 30, 35, 40, 45',
+          Application: 'Cold antifog applications for fresh vegetables, fruits, bread, meat, and other food products, maintaining clarity and preventing fogging.'
+        },
+        {
+          Category: 'Base film for Thermal lamination',
+          Thickness: '25, 30, 35, 40, 45',
+          Application: 'Cold fog packaging for fresh vegetables, fruits, bread, meat, and other food products, providing reliable packaging solutions.'
+        },
+        {
+          Category: 'Base film for Silicone coating',
+          Thickness: '18, 20, 25, 30, 35, 40, 45, 50',
+          Application: 'Serves as an ideal base film for silicone coating, enabling the production of high-quality release liners for various applications.'
+        },
+        {
+          Category: 'Antiskid',
+          Thickness: '15, 18, 20, 25',
+          Application: 'Offers antiskid properties with high coefficient of friction (COF), ensuring stability and secure packaging for various products.'
+        },
+        {
+          Category: 'Cold seal',
+          Thickness: '10, 12, 15, 18, 20, 25',
+          Application: 'Reverse printing, lamination, and as a release layer in cold seal lamination processes, ensuring efficient and reliable packaging solutions.'
+        },
+        {
+          Category: 'Oxo-biodegradable (transparent & metallized)',
+          Thickness: '18, 20, 25',
+          Application: 'Well-suited for printing, lamination, and conversion processes, delivering versatility and excellent performance in various applications.'
         }
       ],
     },
