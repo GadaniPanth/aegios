@@ -97,27 +97,22 @@
             <table class="table">
                 <thead>
                     <tr>
-                        <th *ngFor="let header of tableHeaders">{{ header }}</th>
+                        <th class="" *ngFor="let header of tableHeaders">{{ header }}</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr *ngFor="let row of product.table">
-                        <th *ngFor="let header of tableHeaders">{{ row[header] }}</th>
-                    </tr>
+                    <ng-container *ngFor="let group of product.table">
+                        <tr *ngFor="let row of group.rows; let i = index">
+                            <th *ngIf="i === 0" [attr.rowspan]="group.ntypeof">{{ group.typeof }}</th>
+                            <th>{{ row.category }}</th>
+                            <th>{{ row.thickness }}</th>
+                            <th>{{ row.application }}</th>
+                            <!-- <th *ngFor="let hear of tableHeaders"></th> -->
+                        </tr>
+                    </ng-container>
                 </tbody>
+
             </table>
-            <!-- <table class="table">
-                <thead>
-                    <tr>
-                        <th *ngFor="let header of tableHeaders">{{ header }}</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr *ngFor="let row of product.table">
-                        <th *ngFor="let header of tableHeaders">{{ row[header] }}</th>
-                    </tr>
-                </tbody>
-            </table> -->
         </div>
     </section>
 </div>

@@ -12,7 +12,7 @@ import Swiper, { Autoplay } from 'swiper';
 export class ProductsComponent implements OnInit {
   swiper!: Swiper;
   product: any;
-  tableHeaders: string[] = [];
+  tableHeaders: any[] = [];
 
   constructor(
     private route: ActivatedRoute,
@@ -25,19 +25,25 @@ export class ProductsComponent implements OnInit {
     this.route.paramMap.subscribe(params => {
       const slug = params.get('product');
       const product = this.productDataService.getProductBySlug(slug);
+      const tableLen: number = 0;
 
       if (product) {
         this.product = product;
-        // this.location.replaceState(`/${slug}`);
-        if (product.table && product.table.length > 0) {
-          this.tableHeaders = Object.keys(product.table[0]);
+        console.log(product.table[0]['rows']);
+        console.log(product.table[0]['rows'][0]);
+        console.log(product.table[0]['rows'][0]['category']);
+        if (Object.keys(product.table[0])[0] == 'typeof') {
+          // this.tableHeaders.push('Type of film')
         }
+        Object.keys(product.table[0]['rows'][0]).forEach(key => {
+          this.tableHeaders.push(key)
+        })
       } else {
         this.router.navigate(['/']);
       }
     });
   }
-  
+
   ngAfterViewInit(): void {
     // Swiper.use([Navigation]);
     // Swiper.use([EffectFade]);
