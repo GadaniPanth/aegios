@@ -33,7 +33,7 @@ export class ProductsComponent implements OnInit {
       }
     });
   }
-
+  
   ngAfterViewInit(): void {
     // Swiper.use([Navigation]);
     // Swiper.use([EffectFade]);
