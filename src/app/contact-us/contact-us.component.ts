@@ -32,12 +32,13 @@ export class ContactUsComponent implements OnInit {
   // formData = {
   //   Country: this.countries[1];
   // }
-  onKeyPress(event: KeyboardEvent) {
-    const charCode = event.which ? event.which : event.keyCode;
-    if (charCode < 48 || charCode > 57) {
+  onKeyPress(event: KeyboardEvent): void {
+    const isDigit = /^[0-9]$/.test(event.key);
+    if (!isDigit) {
       event.preventDefault();
     }
   }
+
   onSubmit(form: any) {
     if (form.valid) {
       console.log("Form submitted:", this.formData);
