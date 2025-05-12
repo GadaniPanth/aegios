@@ -96,17 +96,27 @@
             <table class="table">
                 <thead>
                     <tr>
-                        <th>Category</th>
-                        <th>Application</th>
+                        <th *ngFor="let header of tableHeaders">{{ header }}</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr *ngFor="let row of product.table">
-                        <th>{{row[0]}}</th>
-                        <th>{{row[1]}}</th>
+                        <th *ngFor="let header of tableHeaders">{{ row[header] }}</th>
                     </tr>
                 </tbody>
             </table>
+            <!-- <table class="table">
+                <thead>
+                    <tr>
+                        <th *ngFor="let header of tableHeaders">{{ header }}</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let row of product.table">
+                        <th *ngFor="let header of tableHeaders">{{ row[header] }}</th>
+                    </tr>
+                </tbody>
+            </table> -->
         </div>
     </section>
 </div>

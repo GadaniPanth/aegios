@@ -102,18 +102,9 @@ export class ProductDataService {
         "Aseptic packaging",
       ],
       table: [
-        [
-          "Bottle grade",
-          "Specifically designed for the packaging of beverages, including carbonated drinks, mineral and drinking water, edible oil, liquor, and more.",
-        ],
-        [
-          "Bottle Textile grade",
-          "Ideal for the processing of polyester filament or yarn, such as POY and FDY. It is available in various finishes including Textile Semi Dull, Super Bright, Full Dull, Homo Bright, Textile Cationic Semi Dull, and Textile Cationic Bright.",
-        ],
-        [
-          "Film grade",
-          "Suitable for manufacturing of BOPET films. It is available in Film Bright and Film Silica variants, ensuring excellent performance in film production.",
-        ],
+        ['Bottle grade', 'Specifically designed for the packaging of beverages, including carbonated drinks, mineral and drinking water, edible oil, liquor, and more.'],
+        ['Bottle Textile grade', 'Ideal for the processing of polyester filament or yarn, such as POY and FDY. It is available in various finishes including Textile Semi Dull, Super Bright, Full Dull, Homo Bright, Textile Cationic Semi Dull, and Textile Cationic Bright.'],
+        ['Film grade', 'Suitable for manufacturing of BOPET films. It is available in Film Bright and Film Silica variants, ensuring excellent performance in film production.'],
       ],
     },
     {
@@ -154,18 +145,9 @@ export class ProductDataService {
         "Polyester Resins and Chips",
       ],
       table: [
-        [
-          "Bottle grade",
-          "Specifically designed for the packaging of beverages, including carbonated drinks, mineral and drinking water, edible oil, liquor, and more.",
-        ],
-        [
-          "Bottle Textile grade",
-          "Ideal for the processing of polyester filament or yarn, such as POY and FDY. It is available in various finishes including Textile Semi Dull, Super Bright, Full Dull, Homo Bright, Textile Cationic Semi Dull, and Textile Cationic Bright.",
-        ],
-        [
-          "Film grade",
-          "Suitable for manufacturing of BOPET films. It is available in Film Bright and Film Silica variants, ensuring excellent performance in film production.",
-        ],
+        ['Bottle grade', 'Specifically designed for the packaging of beverages, including carbonated drinks, mineral and drinking water, edible oil, liquor, and more.'],
+        ['Bottle Textile grade', 'Ideal for the processing of polyester filament or yarn, such as POY and FDY. It is available in various finishes including Textile Semi Dull, Super Bright, Full Dull, Homo Bright, Textile Cationic Semi Dull, and Textile Cationic Bright.'],
+        ['Film grade', 'Suitable for manufacturing of BOPET films. It is available in Film Bright and Film Silica variants, ensuring excellent performance in film production.'],
       ],
     },
     // {
