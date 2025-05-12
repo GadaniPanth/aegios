@@ -12,6 +12,7 @@ import Swiper, { Autoplay } from 'swiper';
 export class ProductsComponent implements OnInit {
   swiper!: Swiper;
   product: any;
+  tableHeaders: string[] = [];
 
   constructor(
     private route: ActivatedRoute,
@@ -28,6 +29,9 @@ export class ProductsComponent implements OnInit {
       if (product) {
         this.product = product;
         // this.location.replaceState(`/${slug}`);
+        if (product.table && product.table.length > 0) {
+          this.tableHeaders = Object.keys(product.table[0]);
+        }
       } else {
         this.router.navigate(['/']);
       }
