@@ -13,6 +13,7 @@ export class ProductsComponent implements OnInit {
   swiper!: Swiper;
   product: any;
   tableHeaders: any[] = [];
+  haveTypeOf: boolean = false;
 
   constructor(
     private route: ActivatedRoute,
@@ -33,7 +34,8 @@ export class ProductsComponent implements OnInit {
         console.log(product.table[0]['rows'][0]);
         console.log(product.table[0]['rows'][0]['category']);
         if (Object.keys(product.table[0])[0] == 'typeof') {
-          // this.tableHeaders.push('Type of film')
+          this.tableHeaders.push('Type of film');
+          this.haveTypeOf = true;
         }
         Object.keys(product.table[0]['rows'][0]).forEach(key => {
           this.tableHeaders.push(key)

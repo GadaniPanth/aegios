@@ -101,17 +101,24 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <ng-container *ngFor="let group of product.table">
-                        <tr *ngFor="let row of group.rows; let i = index">
-                            <th *ngIf="i === 0" [attr.rowspan]="group.ntypeof">{{ group.typeof }}</th>
-                            <th>{{ row.category }}</th>
-                            <th>{{ row.thickness }}</th>
-                            <th>{{ row.application }}</th>
-                            <!-- <th *ngFor="let hear of tableHeaders"></th> -->
-                        </tr>
+                    <ng-container *ngIf="haveTypeOf; else ElseBlockTable">
+                        <ng-container *ngFor="let group of product.table">
+                            <tr *ngFor="let row of group.rows; let i = index">
+                                <th *ngIf="i === 0" [attr.rowspan]="group.ntypeof">{{ group['typeof'] }}</th>
+                                <th>{{ row.category }}</th>
+                                <th>{{ row.thickness }}</th>
+                                <th>{{ row.application }}</th>
+                            </tr>
+                        </ng-container>
                     </ng-container>
+                    <ng-template #ElseBlockTable>
+                        <ng-container *ngFor="let group of product.table">
+                            <tr *ngFor="let row of group.rows; let i = index">
+                                <th *ngFor="let header of tableHeaders"> {{row[header]}} </th>
+                            </tr>
+                        </ng-container>
+                    </ng-template>
                 </tbody>
-
             </table>
         </div>
     </section>
