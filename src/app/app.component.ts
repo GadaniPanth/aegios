@@ -1,9 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.less']
+  selector: "app-root",
+  templateUrl: "./app.component.html",
+  styleUrls: ["./app.component.less"],
 })
 export class AppComponent {
   private _isMenuOpen = false;
@@ -13,7 +13,7 @@ export class AppComponent {
 
   set isMenuOpen(value: boolean) {
     this._isMenuOpen = value;
-    document.body.style.overflow = value ? 'hidden' : '';
+    document.body.style.overflow = value ? "hidden" : "";
   }
 
   toggleMenu(e: MouseEvent) {
@@ -34,11 +34,10 @@ export class AppComponent {
   }
 
   ngOnInit() {
-    document.addEventListener('keydown', (e) => {
-      if (e.code.toLocaleLowerCase() == 'escape') {
+    document.addEventListener("keydown", (e) => {
+      if (e.code && e.code.toLocaleLowerCase() === "escape") {
         this.isMenuOpen = false;
       }
-    })
+    });
   }
-
 }
