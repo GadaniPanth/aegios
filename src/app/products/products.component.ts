@@ -1,18 +1,18 @@
-import { AfterViewInit, Component, OnInit } from '@angular/core';
-import { ProductDataService } from '../product-data.service';
-import { ActivatedRoute, Router } from '@angular/router';
-import { Location } from '@angular/common';
-import Swiper, { Autoplay } from 'swiper';
+import { AfterViewInit, Component, OnInit } from "@angular/core";
+import { ProductDataService } from "../product-data.service";
+import { ActivatedRoute, Router } from "@angular/router";
+import { Location } from "@angular/common";
+import Swiper, { Autoplay } from "swiper";
 
 @Component({
-  selector: 'app-products',
-  templateUrl: './products.component.html',
-  styleUrls: ['./products.component.less']
+  selector: "app-products",
+  templateUrl: "./products.component.html",
+  styleUrls: ["./products.component.less"],
 })
 export class ProductsComponent implements OnInit, AfterViewInit {
   swiper!: Swiper;
   product: any;
-  tableHeaders: any[] = [];
+  tableHeaders: any[] = []; 
   haveTypeOf: boolean = false;
 
   constructor(
@@ -20,11 +20,11 @@ export class ProductsComponent implements OnInit, AfterViewInit {
     private router: Router,
     private productDataService: ProductDataService,
     private location: Location
-  ) { }
+  ) {}
 
   ngOnInit() {
-    this.route.paramMap.subscribe(params => {
-      const slug = params.get('product');
+    this.route.paramMap.subscribe((params) => {
+      const slug = params.get("product");
       const product = this.productDataService.getProductBySlug(slug);
       this.tableHeaders = []; // Reset to avoid accumulation
       this.haveTypeOf = false;
@@ -33,19 +33,19 @@ export class ProductsComponent implements OnInit, AfterViewInit {
         this.product = product;
 
         // Rebuild table headers
-        if (Object.keys(product.table[0])[0] == 'typeof') {
-          this.tableHeaders.push('Type of film');
+        if (Object.keys(product.table[0])[0] == "typeof") {
+          this.tableHeaders.push("Type of film");
           this.haveTypeOf = true;
         }
 
-        Object.keys(product.table[0]['rows'][0]).forEach(key => {
+        Object.keys(product.table[0]["rows"][0]).forEach((key) => {
           this.tableHeaders.push(key);
         });
 
         // You may also want to re-initialize Swiper here if needed
         setTimeout(() => this.initSwiper(), 0); // Wait for DOM
       } else {
-        this.router.navigate(['/']);
+        this.router.navigate(["/"]);
       }
     });
   }
@@ -58,7 +58,7 @@ export class ProductsComponent implements OnInit, AfterViewInit {
   private initSwiper() {
     Swiper.use([Autoplay]);
     this.swiper = new Swiper(".swiper-container", {
-      slidesPerView: 'auto',
+      slidesPerView: "auto",
       spaceBetween: 30,
       speed: 1000,
       navigation: {
