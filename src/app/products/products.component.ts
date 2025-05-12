@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, OnInit } from '@angular/core';
+import { AfterViewInit, ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { ProductDataService } from '../product-data.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Location } from '@angular/common';
@@ -9,7 +9,7 @@ import Swiper, { Autoplay } from 'swiper';
   templateUrl: './products.component.html',
   styleUrls: ['./products.component.less']
 })
-export class ProductsComponent implements OnInit, AfterViewInit {
+export class ProductsComponent implements OnInit {
   swiper!: Swiper;
   product: any;
   tableHeaders: any[] = [];
@@ -19,21 +19,21 @@ export class ProductsComponent implements OnInit, AfterViewInit {
     private route: ActivatedRoute,
     private router: Router,
     private productDataService: ProductDataService,
-    private location: Location
+    private location: Location,
+    private cdr: ChangeDetectorRef
   ) { }
 
   ngOnInit() {
     this.route.paramMap.subscribe(params => {
       const slug = params.get('product');
       const product = this.productDataService.getProductBySlug(slug);
-      this.tableHeaders = []; // Reset to avoid accumulation
+      this.tableHeaders = [];
       this.haveTypeOf = false;
 
       if (product) {
         this.product = product;
 
-        // Rebuild table headers
-        if (Object.keys(product.table[0])[0] == 'typeof') {
+        if (Object.keys(product.table[0])[0] === 'typeof') {
           this.tableHeaders.push('Type of film');
           this.haveTypeOf = true;
         }
@@ -42,8 +42,16 @@ export class ProductsComponent implements OnInit, AfterViewInit {
           this.tableHeaders.push(key);
         });
 
-        // You may also want to re-initialize Swiper here if needed
-        setTimeout(() => this.initSwiper(), 0); // Wait for DOM
+        // Wait for DOM update
+        this.cdr.detectChanges();
+
+        // Destroy previous swiper instance if exists
+        if (this.swiper) {
+          this.swiper.destroy(true, true);
+        }
+
+        // Re-initialize
+        setTimeout(() => this.initSwiper(), 0);
       } else {
         this.router.navigate(['/']);
       }
@@ -51,8 +59,24 @@ export class ProductsComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit(): void {
-    // Moved swiper init to its own method
-    this.initSwiper();
+    // setTimeout(() => this.initSwiper(), 10);
+
+    //   // setTimeout(() => {
+    //   Swiper.use([Autoplay]);
+    //   new Swiper(".swiper-container", {
+    //     slidesPerView: 'auto',
+    //     spaceBetween: 30,
+    //     speed: 1000,
+    //     // autoplay: {
+    //       // pauseOnMouseEnter: true,
+    //       // stopOnLastSlide: true,
+    //       // disableOnInteraction: false,
+    //       // reverseDirection: true,
+    //     // },
+    //     // loop: true,
+    //     // watchSlidesProgress: true,
+    //   });
+    //   // }, 10)
   }
 
   private initSwiper() {
@@ -61,12 +85,10 @@ export class ProductsComponent implements OnInit, AfterViewInit {
       slidesPerView: 'auto',
       spaceBetween: 30,
       speed: 1000,
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
       autoplay: {
         delay: 2000,
+        pauseOnMouseEnter: true,
+        disableOnInteraction: false,
       },
       loop: true,
     });
