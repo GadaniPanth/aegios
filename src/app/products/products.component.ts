@@ -5,9 +5,9 @@ import { Location } from '@angular/common';
 import Swiper, { Autoplay } from 'swiper';
 
 @Component({
-  selector: 'app-products',
-  templateUrl: './products.component.html',
-  styleUrls: ['./products.component.less']
+  selector: "app-products",
+  templateUrl: "./products.component.html",
+  styleUrls: ["./products.component.less"],
 })
 export class ProductsComponent implements OnInit {
   swiper!: Swiper;
@@ -24,8 +24,8 @@ export class ProductsComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.route.paramMap.subscribe(params => {
-      const slug = params.get('product');
+    this.route.paramMap.subscribe((params) => {
+      const slug = params.get("product");
       const product = this.productDataService.getProductBySlug(slug);
       this.tableHeaders = [];
       this.haveTypeOf = false;
@@ -33,12 +33,13 @@ export class ProductsComponent implements OnInit {
       if (product) {
         this.product = product;
 
-        if (Object.keys(product.table[0])[0] === 'typeof') {
+        // Rebuild table headers
+        if (Object.keys(product.table[0])[0] == 'typeof') {
           this.tableHeaders.push('Type of film');
           this.haveTypeOf = true;
         }
 
-        Object.keys(product.table[0]['rows'][0]).forEach(key => {
+        Object.keys(product.table[0]["rows"][0]).forEach((key) => {
           this.tableHeaders.push(key);
         });
 
@@ -53,7 +54,7 @@ export class ProductsComponent implements OnInit {
         // Re-initialize
         setTimeout(() => this.initSwiper(), 0);
       } else {
-        this.router.navigate(['/']);
+        this.router.navigate(["/"]);
       }
     });
   }
@@ -82,7 +83,7 @@ export class ProductsComponent implements OnInit {
   private initSwiper() {
     Swiper.use([Autoplay]);
     this.swiper = new Swiper(".swiper-container", {
-      slidesPerView: 'auto',
+      slidesPerView: "auto",
       spaceBetween: 30,
       speed: 1000,
       autoplay: {
