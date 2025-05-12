@@ -8,42 +8,40 @@ import { Component, OnInit } from "@angular/core";
 export class ContactUsComponent implements OnInit {
   constructor() {}
 
-  ngOnInit() {}
-  maxFileSize = 2 * 1024 * 1024;
-  selectedFile: File | null = null;
+  ngOnInit(): void {}
+
   formData = {
-    contactNumber: "",
-    email: "",
-    country: "",
-    file: null,
     Name: "",
-    // formData: ""
+    Email: "",
+    ContactNumber: "",
+    CompanyName: "",
+    Country: "",
+    InterestedIn: "",
+    Comments: "",
   };
 
-  countries = ["Afghanistan"];
+  countries: string[] = ["Afghanistan", "India", "USA", "Germany"];
 
-  interested_in = [
+  interested_in: string[] = [
     "BOPET Films",
     "Metallised Films",
     "Polyster Resins & Chips",
-    "BOPP Films (comming soon)",
-    "other",
+    "BOPP Films (coming soon)",
+    "Other",
   ];
-  // formData = {
-  //   Country: this.countries[1];
-  // }
+
   onKeyPress(event: KeyboardEvent): void {
-    const isDigit = /^[0-9]$/.test(event.key);
-    if (!isDigit) {
+    if (!/^[0-9]$/.test(event.key)) {
       event.preventDefault();
     }
   }
 
-  onSubmit(form: any) {
+  onSubmit(form: any): void {
     if (form.valid) {
       console.log("Form submitted:", this.formData);
+      alert("Form submitted successfully!");
     } else {
-      alert("Please fill all required fields correctly");
+      alert("Please fill all required fields correctly.");
     }
   }
 }
