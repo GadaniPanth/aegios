@@ -72,7 +72,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="contact-right inner-flex">
+                <div class="contact-right inner-flex" style="width: 68%;">
                     <h2 class="uppercase font_30 fw400 red-color">We welcome your inquiries - Let's connect!</h2>
 
                     <div class="form">
@@ -119,9 +119,10 @@
 
                             <!-- Contact Name Field -->
                             <div class="form-group">
-                                <label for="companyName">companyName</label>
-                                <input type="text" id="companyName" name="companyName" [(ngModel)]="formData.companyName" #companyName="ngModel"
-                                    class="form-control" placeholder="Company Name">
+                                <label for="companyName">Company Name</label>
+                                <input type="text" id="companyName" name="companyName"
+                                    [(ngModel)]="formData.companyName" #companyName="ngModel" class="form-control"
+                                    placeholder="Company Name">
 
                                 <div *ngIf="Name.touched && Name.errors" class="error-message">
                                     <div *ngIf="Name.errors.required">Name is required</div>
@@ -131,8 +132,8 @@
                             <!-- Country Dropdown -->
                             <div class="form-group">
                                 <label for="Country">Country</label>
-                                <select id="Country" name="Country" [(ngModel)]="formData.Country"
-                                    #Country="ngModel" class="form-control" required>
+                                <select id="Country" name="Country" [(ngModel)]="formData.Country" #Country="ngModel"
+                                    class="form-control" required>
                                     <option *ngFor="let country of country" [value]="contry">{{country}}</option>
                                 </select>
 
@@ -140,6 +141,34 @@
                                     Please select a Country
                                 </div>
                             </div>
+
+                            <!-- Interested in  Dropdown -->
+                            <div class="form-group">
+                                <label for="InterestedIn">Interested in</label>
+                                <select id="InterestedIn" name="InterestedIn" [(ngModel)]="formData.InterestedIn"
+                                    #InterestedIn="ngModel" class="form-control" required>
+                                    <option value="" disabled selected>Select an option</option>
+                                    <option *ngFor="let interest of interested_in" [value]="interest">
+                                        {{interest}}
+                                    </option>
+                                </select>
+
+                                <div *ngIf="InterestedIn.touched && InterestedIn.errors?.required"
+                                    class="error-message">
+                                    Please select an option
+                                </div>
+                            </div>
+
+                            <!-- Comments Field -->
+
+                            <div class="form-group">
+                                <label for="comments">Comments</label>
+                                <textarea id="comments" name="comments" [(ngModel)]="formData.comments"
+                                    #comments="ngModel" class="form-control"
+                                    placeholder="Enter your Commets"></textarea>
+                            </div>
+
+
                             <!-- Submit Button -->
                             <button type="submit" class="btn wmc font_17">
                                 Submit <i class="fa-solid fa-paper-plane planicon" style="margin-left: 10px;"></i>
