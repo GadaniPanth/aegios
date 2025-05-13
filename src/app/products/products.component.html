@@ -125,9 +125,8 @@
                 </table>
             </div>
             <div class="visible-680">
-                <ng-container *ngIf="haveTypeOf; else ElseBlockTable">
+                <ng-container *ngIf="haveTypeOf; else ElseBlockTable680">
                     <ng-container *ngFor="let group of product.table">
-                        <!-- <h5>{{ group['typeof'] }}</h5> -->
                         <ng-container *ngFor="let row of group.rows">
                             <table class="table mb-20">
                                 <tbody>
@@ -141,13 +140,13 @@
                     </ng-container>
                 </ng-container>
 
-                <ng-template #ElseBlockTable>
+                <ng-template #ElseBlockTable680>
                     <ng-container *ngFor="let group of product.table">
                         <ng-container *ngFor="let row of group.rows">
                             <table class="table mb-20">
                                 <tbody>
                                     <tr *ngFor="let header of tableHeaders">
-                                        <th>{{ header }}</th>
+                                        <th class="red-bg white-color">{{ header }}</th>
                                         <td>{{ row[header] }}</td>
                                     </tr>
                                 </tbody>
@@ -155,7 +154,6 @@
                         </ng-container>
                     </ng-container>
                 </ng-template>
-
             </div>
         </div>
     </section>
