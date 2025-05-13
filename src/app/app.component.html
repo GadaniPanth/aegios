@@ -1,15 +1,16 @@
 <div class="aegios_wrapper">
 
-  <!-- <div class="page-loader">
+  <div class="page-loader">
     <div class="img-container">
       <img src="assets/images/preloader.png" alt="preLoader">
     </div>
-  </div> -->
+  </div>
 
   <header class="nav-sticky">
     <div class="w100">
       <div class="nav flex-gap-big" [class.active]="isMenuOpen">
-        <div class="logo"><a (click)="toggleMenu($event)" routerLink="/"><img src="assets/images/logo.png" alt="logo"></a>
+        <div class="logo"><a (click)="toggleMenu($event)" routerLink="/"><img src="assets/images/logo.png"
+              alt="logo"></a>
         </div>
         <div class="menu_btn font_30" (click)="toggleMenu($event)"><i class="fa-solid fa-bars"></i></div>
         <ul class="links flex-gap-small">
