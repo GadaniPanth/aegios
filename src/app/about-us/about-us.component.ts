@@ -7,7 +7,7 @@ import { Component, AfterViewInit, ViewChild, ViewChildren, QueryList, ElementRe
   styleUrls: ['./about-us.component.less']
 })
 export class AboutUsComponent implements AfterViewInit {
-   @ViewChildren('counter') counters!: QueryList<ElementRef>;
+  @ViewChildren('counter') counters!: QueryList<ElementRef>;
 
   constructor() { }
 
@@ -33,8 +33,10 @@ export class AboutUsComponent implements AfterViewInit {
               }
             };
 
-            updateCount();
-            obs.unobserve(el);
+            setTimeout(() => {
+              updateCount();
+              obs.unobserve(el);
+            }, 1000)
           }
         });
       },
