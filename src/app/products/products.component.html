@@ -94,32 +94,69 @@
             <h2 class="font_30">Product Range</h2>
         </div>
         <div class="table_container">
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th class="" *ngFor="let header of tableHeaders">{{ header }}</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <ng-container *ngIf="haveTypeOf; else ElseBlockTable">
-                        <ng-container *ngFor="let group of product.table">
-                            <tr *ngFor="let row of group.rows; let i = index">
-                                <th *ngIf="i === 0" [attr.rowspan]="group.ntypeof">{{ group['typeof'] }}</th>
-                                <th>{{ row.category }}</th>
-                                <th>{{ row.thickness }}</th>
-                                <th>{{ row.application }}</th>
-                            </tr>
+            <div class="visible-desk">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th class="" *ngFor="let header of tableHeaders">{{ header }}</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <ng-container *ngIf="haveTypeOf; else ElseBlockTable">
+                            <ng-container *ngFor="let group of product.table">
+                                <tr *ngFor="let row of group.rows; let i = index">
+                                    <th *ngIf="i === 0" [attr.rowspan]="group.ntypeof" style="vertical-align: middle;">
+                                        {{
+                                        group['typeof'] }}</th>
+                                    <th>{{ row.category }}</th>
+                                    <th>{{ row.thickness }}</th>
+                                    <th>{{ row.application }}</th>
+                                </tr>
+                            </ng-container>
+                        </ng-container>
+                        <ng-template #ElseBlockTable>
+                            <ng-container *ngFor="let group of product.table">
+                                <tr *ngFor="let row of group.rows; let i = index">
+                                    <th *ngFor="let header of tableHeaders"> {{row[header]}} </th>
+                                </tr>
+                            </ng-container>
+                        </ng-template>
+                    </tbody>
+                </table>
+            </div>
+            <div class="visible-680">
+                <ng-container *ngIf="haveTypeOf; else ElseBlockTable">
+                    <ng-container *ngFor="let group of product.table">
+                        <!-- <h5>{{ group['typeof'] }}</h5> -->
+                        <ng-container *ngFor="let row of group.rows">
+                            <table class="table mb-20">
+                                <tbody>
+                                    <tr *ngFor="let header of tableHeaders">
+                                        <th class="red-bg white-color">{{ header }}</th>
+                                        <td>{{ row[header] || group['typeof'] }}</td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </ng-container>
                     </ng-container>
-                    <ng-template #ElseBlockTable>
-                        <ng-container *ngFor="let group of product.table">
-                            <tr *ngFor="let row of group.rows; let i = index">
-                                <th *ngFor="let header of tableHeaders"> {{row[header]}} </th>
-                            </tr>
+                </ng-container>
+
+                <ng-template #ElseBlockTable>
+                    <ng-container *ngFor="let group of product.table">
+                        <ng-container *ngFor="let row of group.rows">
+                            <table class="table mb-20">
+                                <tbody>
+                                    <tr *ngFor="let header of tableHeaders">
+                                        <th>{{ header }}</th>
+                                        <td>{{ row[header] }}</td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </ng-container>
-                    </ng-template>
-                </tbody>
-            </table>
+                    </ng-container>
+                </ng-template>
+
+            </div>
         </div>
     </section>
 </div>

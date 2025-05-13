@@ -231,6 +231,15 @@
     }
   }
 
+  .visible-680 {
+    display: none;
+  }
+
+
+  .visible-desk {
+    display: block;
+  }
+
   .section-6 {
     // width: 95%;
 
@@ -250,6 +259,9 @@
         background-color: #ed2037;
         color: white;
         font-weight: 800;
+        align-self: center;
+        vertical-align: middle;
+        text-transform: capitalize;
       }
 
       th {
@@ -257,7 +269,6 @@
         border: 1px solid #eaedff;
         font-size: 16px;
         font-weight: 100;
-        vertical-align: top;
         caption-side: bottom;
 
         &:first-of-type {
@@ -265,8 +276,17 @@
         }
       }
 
+      tr {
+        border: solid 1px #eaedff;
+      }
+
+      tr:nth-child(even) {
+        background-color: #F1F1F1;
+      }
+
       tbody th {
         color: #212552;
+        vertical-align: top;
       }
     }
   }
@@ -365,7 +385,11 @@
 
 @media only screen and (max-width:823px) {
   .aegios_wrapper .section-4 .feature_card_container {
+    width: 95%;
+
     .feature_card {
+      height: fit-content;
+      min-height: unset;
 
       &:nth-child(odd) {
         margin-left: 30%;
@@ -398,6 +422,7 @@
   .aegios_wrapper .section-4 .feature_card_container {
     .feature_card {
       width: 70%;
+      min-height: unset;
 
       .icon {
         width: 15%;
@@ -412,7 +437,30 @@
   }
 }
 
-@media only screen and (max-width: 680px) {}
+@media only screen and (max-width: 486px) {
+  .section-6.container {
+    width: 97%;
+  }
+}
+
+@media only screen and (max-width: 680px) {
+  .aegios_wrapper .visible-680 {
+    display: block;
+  }
+
+  .aegios_wrapper .visible-desk {
+    display: none;
+  }
+
+  .red-bg {
+    background-color: @red-bg;
+  }
+
+  td {
+    padding-left: 20px;
+  }
+
+}
 
 @media only screen and (max-width:600px) {
   .aegios_wrapper .section-4 .feature_card_container {
@@ -462,7 +510,7 @@
   }
 }
 
-@media only screen and (max-width: 370px) {
+@media only screen and (max-width: 375px) {
   .container {
     width: 90%;
     margin: 0 auto;
@@ -485,6 +533,8 @@
   }
 
   .aegios_wrapper .section-4 .feature_card_container {
+    width: 100%;
+
     .feature_card {
       width: 90%;
       padding: 10px;
