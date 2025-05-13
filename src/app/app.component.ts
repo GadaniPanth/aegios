@@ -1,4 +1,5 @@
 import { Component, OnInit } from "@angular/core";
+import { NavigationEnd, Router } from "@angular/router";
 
 @Component({
   selector: "app-root",
@@ -6,6 +7,15 @@ import { Component, OnInit } from "@angular/core";
   styleUrls: ["./app.component.less"],
 })
 export class AppComponent {
+
+  constructor(private router: Router) {
+    this.router.events.subscribe((e) => {
+      if (e instanceof NavigationEnd) {
+        window.scrollTo(0, 0);
+      }
+    })
+  }
+
   private _isMenuOpen = false;
   get isMenuOpen(): boolean {
     return this._isMenuOpen;

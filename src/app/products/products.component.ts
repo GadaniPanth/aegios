@@ -33,7 +33,6 @@ export class ProductsComponent implements OnInit {
       if (product) {
         this.product = product;
 
-        // Rebuild table headers
         if (Object.keys(product.table[0])[0] == 'typeof') {
           this.tableHeaders.push('Type of film');
           this.haveTypeOf = true;
@@ -43,15 +42,12 @@ export class ProductsComponent implements OnInit {
           this.tableHeaders.push(key);
         });
 
-        // Wait for DOM update
         this.cdr.detectChanges();
 
-        // Destroy previous swiper instance if exists
         if (this.swiper) {
           this.swiper.destroy(true, true);
         }
 
-        // Re-initialize
         setTimeout(() => this.initSwiper(), 0);
       } else {
         this.router.navigate(["/"]);
@@ -59,26 +55,7 @@ export class ProductsComponent implements OnInit {
     });
   }
 
-  ngAfterViewInit(): void {
-    // setTimeout(() => this.initSwiper(), 10);
-
-    //   // setTimeout(() => {
-    //   Swiper.use([Autoplay]);
-    //   new Swiper(".swiper-container", {
-    //     slidesPerView: 'auto',
-    //     spaceBetween: 30,
-    //     speed: 1000,
-    //     // autoplay: {
-    //       // pauseOnMouseEnter: true,
-    //       // stopOnLastSlide: true,
-    //       // disableOnInteraction: false,
-    //       // reverseDirection: true,
-    //     // },
-    //     // loop: true,
-    //     // watchSlidesProgress: true,
-    //   });
-    //   // }, 10)
-  }
+  ngAfterViewInit(): void { }
 
   private initSwiper() {
     Swiper.use([Autoplay]);

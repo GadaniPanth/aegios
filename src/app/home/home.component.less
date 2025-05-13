@@ -35,14 +35,12 @@
     width: fit-content;
     height: fit-content;
     font-family: @lato-bold;
-    background: linear-gradient(
-      180deg,
-      #fa431800 15.22%,
-      #e92b4340 33.76%,
-      #e92b438f 58.49%,
-      #e92b438f 79.25%,
-      #e92b43 100%
-    );
+    background: linear-gradient(180deg,
+        #fa431800 15.22%,
+        #e92b4340 33.76%,
+        #e92b438f 58.49%,
+        #e92b438f 79.25%,
+        #e92b43 100%);
     border-radius: 20px;
     display: inline-block;
     position: relative;
@@ -149,6 +147,7 @@
 
 .bottom_line {
   position: relative;
+
   // display: inline-block;
   &::before {
     content: "";
@@ -196,6 +195,7 @@
   padding: 20px;
   grid-template-columns: 1fr 0.2fr;
   place-items: unset;
+
   .title {
     grid-column: 1 / span 2;
   }
@@ -221,6 +221,87 @@
   grid-template-columns: repeat(auto, 1fr);
 }
 
+.section3 {
+  .block {
+    border-radius: 16px;
+    padding: 35px;
+    width: 100%;
+  }
+
+  .swiper-wrapper {
+    z-index: 1;
+  }
+
+  ::ng-deep .swiper-container {
+    grid-column: 1 / span 2;
+  }
+
+  ::ng-deep .swiper-slide {
+    width: calc(100% / 3) !important;
+  }
+}
+
+.section4 {
+
+  .block {
+    border-radius: 16px;
+    padding: 35px;
+    width: 100%;
+
+    &.block1 {
+      background-color: #fa43180f;
+    }
+
+    &.block2 {
+      background-color: #080c2412;
+    }
+
+    &.block3 {
+      background-color: #0085ef14;
+    }
+
+    &.block4 {
+      background-color: #080c2412;
+    }
+
+    .icon {
+      @width: 60px;
+      height: @width;
+      width: @width;
+      padding: 10px;
+      background-color: #e92b43;
+      border-radius: 50%;
+      box-shadow: -4px -6px 0px #000000;
+
+      img {
+        transition: all .8s ease;
+      }
+    }
+
+    &:hover .icon {
+      img {
+        transform: scale(1.1);
+      }
+    }
+
+    .heading-text {
+      text-transform: uppercase;
+    }
+
+    .p_text {
+      line-height: 1.5rem;
+    }
+  }
+
+  ::ng-deep .swiper-container {
+    grid-column: 1 / span 2;
+  }
+
+  ::ng-deep .swiper-slide {
+    width: calc(100% / 3) !important;
+  }
+}
+
 @media only screen and (max-width: 1200px) {
   .grid2 {
     grid-template-columns: 1fr;
@@ -238,6 +319,7 @@
   .font_20 {
     font-size: 17px;
   }
+
   .font_48 {
     font-size: 45px;
   }
@@ -258,6 +340,7 @@
     &.grid1 .left_side {
       order: 2;
     }
+
     &.grid1 .right_side {
       width: 50%;
     }
@@ -294,6 +377,7 @@
   .font_20 {
     font-size: 15px;
   }
+
   .font_48 {
     font-size: 24px;
   }

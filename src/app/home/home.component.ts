@@ -42,7 +42,7 @@ export class HomeComponent implements OnInit {
     // Swiper.use([EffectFlip]);
     Swiper.use([Autoplay]);
 
-    this.swiper = new Swiper(".swiper-container", {
+    this.swiper = new Swiper(".section1 .swiper-container", {
       slidesPerView: 1,
       // effect: 'fade',
       // fadeEffect: {
@@ -51,8 +51,44 @@ export class HomeComponent implements OnInit {
       spaceBetween: 24,
       speed: 1000,
       navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
+        nextEl: ".section1 .swiper-button-next",
+        prevEl: ".section1 .swiper-button-prev",
+      },
+      autoplay: {
+        delay: 5000,
+      },
+      loop: true,
+    });
+
+    this.swiper = new Swiper(".section3 .swiper-container", {
+      slidesPerView: 'auto',
+      // effect: 'fade',
+      // fadeEffect: {
+      //   crossFade: true
+      // },
+      spaceBetween: 24,
+      speed: 1000,
+      navigation: {
+        nextEl: ".section3 .swiper-button-next",
+        prevEl: ".section3 .swiper-button-prev",
+      },
+      autoplay: {
+        delay: 5000,
+      },
+      loop: true,
+    });
+
+    this.swiper = new Swiper(".section4 .swiper-container", {
+      slidesPerView: 'auto',
+      // effect: 'fade',
+      // fadeEffect: {
+      //   crossFade: true
+      // },
+      spaceBetween: 24,
+      speed: 1000,
+      navigation: {
+        nextEl: ".section4 .swiper-button-next",
+        prevEl: ".section4 .swiper-button-prev",
       },
       autoplay: {
         delay: 5000,

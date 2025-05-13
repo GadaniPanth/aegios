@@ -20,7 +20,8 @@
                         <div class="right_side">
                             <div class="img_container">
                                 <img [src]="product.img" alt="" *ngIf="product.img">
-                                <video controls *ngIf="product.video" muted autoplay loop style="pointer-events: none;">
+                                <video *ngIf="product.video" muted autoplay loop playsinline
+                                    style="pointer-events: none;">
                                     <source [src]="product.video" type="video/mp4">
                                     Your browser does not support the video tag.
                                 </video>
@@ -76,7 +77,7 @@
     </section>
 
     <section class="section3 w100 mini-section-padding relative">
-        <div class="swiper-container w100">
+        <div class="w100">
             <div class="grid grid3">
                 <div class="title mb-25">
                     <div class="bottom_line">
@@ -84,7 +85,7 @@
                     </div>
                 </div>
                 <div class="head mb-25">
-                    <h2 class="font_30">ENHANCING THE PACKAGING QUALITY WITH <span class="d_block">INNOVATIVE AND
+                    <h2 class="font_30">ENHANCING THE PACKAGING QUALITY WITH INNOVATIVE <span class="d_block"> AND
                             SUSTAINABLE PRODUCTS</span></h2>
                 </div>
                 <div class="swiper_btn_container relative">
@@ -97,17 +98,26 @@
                         <img src="assets/images/right-white-arrow.png" alt="" class="white">
                     </div>
                 </div>
-            </div>
-            <div class="swiper-wrapper">
-                <div class="grid grid4">
+                <!-- <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="card">
+                                <div class="card-head">
+                                    <img src="assets/images/home/BOPET.jpg" alt="">
+                                </div>
+                                <div class="card-body">
 
-                </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
             </div>
         </div>
     </section>
 
     <section class="section4 w100 mini-section-padding relative">
-        <div class="swiper-container w100">
+        <div class="w100">
             <div class="grid grid3">
                 <div class="title mb-25">
                     <div class="bottom_line">
@@ -115,7 +125,7 @@
                     </div>
                 </div>
                 <div class="head mb-25">
-                    <h2 class="font_30">PROVIDING END-TO-END SOLUTIONS<span class="d_block">FOR EVERY BUSINESS
+                    <h2 class="font_30">PROVIDING END-TO-END SOLUTIONS FOR EVERY <span class="d_block"> BUSINESS
                             NEEDS</span></h2>
                 </div>
                 <div class="swiper_btn_container relative">
@@ -128,10 +138,73 @@
                         <img src="assets/images/right-white-arrow.png" alt="" class="white">
                     </div>
                 </div>
-            </div>
-            <div class="swiper-wrapper">
-                <div class="grid grid4">
-
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="block block1">
+                                <div class="icon mb-25">
+                                    <img src="assets/images/home/flexible-packaging.png" alt="">
+                                </div>
+                                <div class="heading-text mb-20">
+                                    <a href="/team-details">
+                                        <h2 class="font_20">Flexible Packaging</h2>
+                                    </a>
+                                </div>
+                                <div class="p_text">
+                                    <p class="font_17 grey-color">Crafting tailored solutions with next-generation
+                                        packaging innovations.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="block block2">
+                                <div class="icon mb-25">
+                                    <img src="assets/images/home/print-lamination.png" alt="">
+                                </div>
+                                <div class="heading-text mb-20">
+                                    <a href="/team-details">
+                                        <h2 class="font_20">Paper Lamination</h2>
+                                    </a>
+                                </div>
+                                <div class="p_text">
+                                    <p class="font_17 grey-color">Elevating paper with innovative and protective
+                                        laminations.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="block block3">
+                                <div class="icon mb-25">
+                                    <img src="assets/images/home/labels.png" alt="">
+                                </div>
+                                <div class="heading-text mb-20">
+                                    <a href="/team-details">
+                                        <h2 class="font_20">Labels</h2>
+                                    </a>
+                                </div>
+                                <div class="p_text">
+                                    <p class="font_17 grey-color">Creating lasting impressions with expert labelling
+                                        solutions.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="block block4">
+                                <div class="icon mb-25">
+                                    <img src="assets/images/home/industrial.png" alt="">
+                                </div>
+                                <div class="heading-text mb-20">
+                                    <a href="/team-details">
+                                        <h2 class="font_20">Industrial</h2>
+                                    </a>
+                                </div>
+                                <div class="p_text">
+                                    <p class="font_17 grey-color">Providing cutting-edge packaging solutions for diverse
+                                        industrial needs.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

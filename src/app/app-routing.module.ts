@@ -39,8 +39,13 @@ const routes: Routes = [
     component: ProductsComponent,
   },
   {
-    path:"vmv",
+    path: "vmv",
     component: VmvComponent
+  },
+
+  {
+    path: '**',
+    redirectTo: ''
   }
 ];
 
