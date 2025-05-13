@@ -30,7 +30,7 @@
                             required pattern="^\d{10}$" (keypress)="onKeyPress($event)" maxlength="10" />
                         <div *ngIf="contactNumber.touched && contactNumber.errors" class="error-message">
                             <div *ngIf="contactNumber.errors.required">Contact number is required</div>
-                            <div *ngIf="contactNumber.errors.pattern">Please enter exactly 10 digits (numbers only)
+                            <div *ngIf="contactNumber.errors.pattern">Please enter valid number
                             </div>
                         </div>
                     </div>
