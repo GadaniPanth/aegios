@@ -222,10 +222,83 @@
 }
 
 .section3 {
-  .block {
+  .card {
     border-radius: 16px;
-    padding: 35px;
+    // padding: 35px;
     width: 100%;
+
+    .card-head {
+      border-radius: 8px 8px 0 0;
+      overflow: hidden;
+      z-index: 1;
+      position: relative;
+
+      img {
+        transition: all .8s ease;
+      }
+    }
+
+    &:hover {
+      img {
+        scale: 1.05;
+      }
+
+      .red-color {
+        color: #171151;
+      }
+    }
+
+    .card-body {
+      position: relative;
+      z-index: 2;
+      border-radius: 8px;
+      text-align: center;
+      width: 95%;
+      margin: 0 auto;
+      margin-top: -80px;
+      background: #FFFFFF;
+
+      * {
+        transition: all .8s ease;
+      }
+
+      .card_text_wrapper {
+        padding: 20px 35px;
+      }
+
+
+
+      .p_text {
+        span {
+          color: #171151;
+        }
+      }
+
+      .button {
+        background: @red-bg;
+        padding: 13px 30px;
+        border-radius: 0 0 8px 8px;
+
+        a {
+          color: white;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 15px;
+        }
+
+        .more-btn-img {
+          width: 30px;
+          border: solid 1px #FFFFFF;
+          border-radius: 50%;
+          padding: 5px;
+        }
+
+        &:hover {
+          background: #000;
+        }
+      }
+    }
   }
 
   .swiper-wrapper {
@@ -237,7 +310,7 @@
   }
 
   ::ng-deep .swiper-slide {
-    width: calc(100% / 3) !important;
+    width: calc(100% / 3.15) !important;
   }
 }
 
@@ -298,7 +371,7 @@
   }
 
   ::ng-deep .swiper-slide {
-    width: calc(100% / 3) !important;
+    width: calc(100% / 3.15) !important;
   }
 }
 
