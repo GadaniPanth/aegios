@@ -20,9 +20,9 @@
             <div class="menu_close font_30" (click)="toggleMenu($event)"><i class="fa-solid fa-xmark"
                 style="color: #ffffff;"></i></div>
           </div>
-          <a (click)="toggleMenu($event)" routerLink="/">
-            <li class="link" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
-              <p class="font_16"><a (click)="toggleMenu($event)" routerLink="/">home</a></p>
+          <a class="link" (click)="toggleMenu($event)" routerLink="/">
+            <li routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
+              <p class="font_16 text-uppercase"><a routerLink="/">home</a></p>
             </li>
           </a>
           <li class="link" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
@@ -56,19 +56,20 @@
             </div>
           </li>
 
-          <a (click)="toggleMenu($event)" routerLink="/sustainability">
-            <li class="link" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
-              <p class="font_16"><a (click)="toggleMenu($event)" routerLink="/sustainability">sustainability</a></p>
+          <a class="link" (click)="toggleMenu($event)" routerLink="/sustainability">
+            <li routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
+              <p class="font_16 text-uppercase"><a routerLink="/sustainability">sustainability</a></p>
             </li>
           </a>
-          <a (click)="toggleMenu($event)" routerLink="/career">
-            <li class="link" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
-              <p class="font_16"><a (click)="toggleMenu($event)" routerLink="/career">career</a></p>
+          <a class="link" (click)="toggleMenu($event)" routerLink="/career">
+            <li routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
+              <p class="font_16 text-uppercase"><a routerLink="/career">career</a></p>
             </li>
           </a>
-          <a (click)="toggleMenu($event)" routerLink="/contact-us">
-            <li class="link" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
-              <p class="font_16"><a (click)="toggleMenu($event)" routerLink="/contact-us">contact-us</a></p>
+          <a class="link" (click)="toggleMenu($event)" routerLink="/contact-us">
+            <li routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
+              <p class="font_16 text-uppercase"><a routerLink="/contact-us">contact-us</a>
+              </p>
             </li>
           </a>
         </ul>
