@@ -21,7 +21,7 @@ export class AboutUsComponent implements AfterViewInit {
             const el = entry.target as HTMLElement;
             const target = +(el.getAttribute('data-target') || '0');
             let count = 0;
-            const increment = target / 80;
+            const increment = target / 30;
 
             const updateCount = () => {
               count += increment;
