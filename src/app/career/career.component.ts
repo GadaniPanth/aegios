@@ -51,8 +51,8 @@ export class CareerComponent implements OnInit {
   }
 
   onKeyPress(event: KeyboardEvent) {
-    const charCode = event.which ? event.which : event.keyCode;
-    if (charCode < 48 || charCode > 57) {
+    const isNumberKey = /^[0-9]$/.test(event.key);
+    if (!isNumberKey) {
       event.preventDefault();
     }
   }
