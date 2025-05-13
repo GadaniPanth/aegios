@@ -7,10 +7,13 @@
         <div class="container">
             <div class="breadcrumb inner-flex ptb-30">
                 <ul class="bg-color">
-                    <li><a routerLink="/" class="red font_18">Home</a></li>
-                    <ng-container *ngIf="product.parent && product.name">
-                        <li><a class="font_18 parent">{{product.parent}}</a></li>
-                        <li><a class="font_18 name">{{product.name}}</a></li>
+                    <li><a routerLink="/" class="red font_18 wow fadeIn" data-wow-duration="1.5s"
+                            data-wow-delay="300ms">Home</a></li>
+                    <ng-container>
+                        <li><a class="font_18 parent wow fadeIn" data-wow-duration="1.5s" data-wow-delay="500ms"
+                                *ngIf="product.parent">{{product.parent}}</a></li>
+                        <li><a class="font_18 name wow fadeIn" data-wow-duration="1.5s" data-wow-delay="700ms"
+                                *ngIf="product.name">{{product.name}}</a></li>
                     </ng-container>
                 </ul>
             </div>
@@ -20,10 +23,10 @@
     <section class="ptb-30" *ngIf="product.sec1Text">
         <div class="container">
             <div class="sec2-grid">
-                <div class="sec2-img">
+                <div class="sec2-img wow fadeIn" data-wow-duration="1.5s" data-wow-delay="300ms">
                     <img [src]="product.sec1Image" [alt]=" product.name">
                 </div>
-                <div class="sec2-details inner-flex">
+                <div class="sec2-details inner-flex wow fadeInRight" data-wow-duration="1.5s" data-wow-delay="300ms">
                     <h2 class="heading uppercase">
                         {{product.name}}
                     </h2>
@@ -48,7 +51,7 @@
     <section class="section-3 bg-about-us" [ngStyle]="{ 'background-image': 'url(' + product.sec2BgImage + ')' }"
         *ngIf="product.sec2Text">
         <div class="container section-padding">
-            <div class="sec-3-details">
+            <div class="sec-3-details wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="300ms">
                 <p class="txt-center font_17 black-color mb-25" *ngFor="let text of product.sec2Text">{{text}}</p>
             </div>
         </div>
@@ -61,10 +64,10 @@
         <div class="feature_card_container d_flex flex-gap-small mtb0">
             <div class="feature_card mb-25" *ngFor="let feature of product.sec4Icon; let i = index;"
                 [class.h240]="product.slug == 'bopp-films'">
-                <div class="icon">
+                <div class="icon wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="300ms">
                     <img [src]="product.sec4Icon[i]" [alt]="product.name">
                 </div>
-                <div class="text">
+                <div class="text wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="300ms">
                     <p class="font_17">{{product.sec4Text[i]}}</p>
                 </div>
             </div>
@@ -73,11 +76,12 @@
 
     <section class="section-5 ptb-30 mtb0" *ngIf="product.sec5Text">
         <div class="head mb-25">
-            <h2 class="font_30">Applications</h2>
+            <h2 class="font_30 wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="300ms">Applications</h2>
         </div>
         <div class="swiper-container">
             <div class="swiper-wrapper">
-                <div class="swiper-slide relative" *ngFor="let feature of product.sec5Image; let i = index;">
+                <div class="swiper-slide relative wow fadeInRight" data-wow-duration="1.5s" data-wow-delay="300ms"
+                    *ngFor="let feature of product.sec5Image; let i = index;">
                     <div class="img_container">
                         <img [src]="product.sec5Image[i]" [alt]="product.name">
                     </div>
@@ -91,7 +95,7 @@
 
     <section class="section-6 ptb-30 container" *ngIf="product.table">
         <div class="head mb-25">
-            <h2 class="font_30">Product Range</h2>
+            <h2 class="font_30 wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="300ms">Product Range</h2>
         </div>
         <div class="table_container">
             <div class="visible-desk">
@@ -105,19 +109,24 @@
                         <ng-container *ngIf="haveTypeOf; else ElseBlockTable">
                             <ng-container *ngFor="let group of product.table">
                                 <tr *ngFor="let row of group.rows; let i = index">
-                                    <th *ngIf="i === 0" [attr.rowspan]="group.ntypeof" style="vertical-align: middle;">
+                                    <th class="wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="300ms"
+                                        *ngIf="i === 0" [attr.rowspan]="group.ntypeof" style="vertical-align: middle;">
                                         {{
                                         group['typeof'] }}</th>
-                                    <th>{{ row.category }}</th>
-                                    <th>{{ row.thickness }}</th>
-                                    <th>{{ row.application }}</th>
+                                    <th class="wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="300ms">{{
+                                        row.category }}</th>
+                                    <th class="wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="300ms">{{
+                                        row.thickness }}</th>
+                                    <th class="wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="300ms">{{
+                                        row.application }}</th>
                                 </tr>
                             </ng-container>
                         </ng-container>
                         <ng-template #ElseBlockTable>
                             <ng-container *ngFor="let group of product.table">
                                 <tr *ngFor="let row of group.rows; let i = index">
-                                    <th *ngFor="let header of tableHeaders"> {{row[header]}} </th>
+                                    <th *ngFor="let header of tableHeaders" class="wow fadeInUp"
+                                        data-wow-duration="1.5s" data-wow-delay="300ms"> {{row[header]}} </th>
                                 </tr>
                             </ng-container>
                         </ng-template>
