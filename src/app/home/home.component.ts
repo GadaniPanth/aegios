@@ -16,16 +16,16 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
     this.products = [
       {
-        head: 'ELEVATING INNOVATION. ACCELERATING DELIVERY',
-        about: 'Transforming packaging landscapes with pioneering solutions, delivered at lightning speed.',
-        video: 'assets/images/home/banner1.mp4',
-        url: 'bopet-films',
-      },
-      {
         head: 'ADDING INNOVATION TO YOUR PACKAGING',
         about: 'Infuse your packaging with game-changing innovation, setting your brand apart.',
         img: 'assets/images/home/banner2.jpg',
         url: 'metalized-films',
+      },
+      {
+        head: 'ELEVATING INNOVATION. ACCELERATING DELIVERY',
+        about: 'Transforming packaging landscapes with pioneering solutions, delivered at lightning speed.',
+        video: 'assets/images/home/banner1.mp4',
+        url: 'bopet-films',
       },
       {
         head: 'DELIVERING WORLD CLASS PACKAGING SOLUTIONS',
